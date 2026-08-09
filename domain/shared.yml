@@ -1,0 +1,43 @@
+version: "3.1"
+
+actions:
+  - action_check_login_state
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_llm
+
+  login_state:
+    type: categorical
+    values:
+      - login
+      - not_login
+    mappings:
+      - type: controlled
+
+  return_value:
+    type: any
+    mappings:
+      - type: controlled
+
+responses:
+  utter_ask_name:
+    - text: "Siapa nama Anda?"
+    
+  utter_greet:
+    - text: "Halo, {name}! Bagaimana saya bisa membantu Anda hari ini di portal SPMB?"
+
+  utter_provide_info:
+    - text: |
+        Saya dapat membantu memberikan informasi terkait Seleksi Penerimaan Mahasiswa Baru (SPMB) Universitas Trisakti.
+        Anda dapat bertanya tentang:
+        - Pendaftaran, Kartu Ujian, Hasil Seleksi
+        - Perjanjian, Pembayaran/Keuangan
+        - Undur Diri, Pindah Prodi, Penyetaraan
+        - Diskon Alumni, Reservasi Pemeriksaan Kesehatan
+        Atau ketik "menu" untuk melihat daftar menu lengkap.
+
+  utter_imabot:
+    - text: "Saya adalah SPMBBot, asisten virtual Anda untuk proses Penerimaan Mahasiswa Baru Universitas Trisakti."

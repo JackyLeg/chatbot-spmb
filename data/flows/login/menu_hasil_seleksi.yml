@@ -1,0 +1,43 @@
+flows:
+  hasil_seleksi:
+    name: Hasil Seleksi
+    description: Membantu pengguna dengan menu hasil seleksi
+    steps:
+      - id: ask_menu
+        collect: menu_hasil_seleksi
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 3 opsi untuk hasil seleksi.
+          Opsi yang tersedia: Prosedur Hasil Seleksi, Persyaratan Hasil Seleksi, dan Hasil Hasil Seleksi.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_hasil_seleksi_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_hasil_seleksi_confirmation is false
+            then:
+              - action: utter_menu_hasil_seleksi_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_hasil_seleksi
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Hasil Seleksi"
+            then:
+              - action: utter_answer_prosedur_hasil_seleksi
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Hasil Seleksi"
+            then:
+              - action: utter_answer_persyaratan_hasil_seleksi
+                next: ask_menu
+          - if: slots.return_value = "Hasil Hasil Seleksi"
+            then:
+              - action: utter_answer_hasil_hasil_seleksi
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_hasil_seleksi
+                next: ask_menu

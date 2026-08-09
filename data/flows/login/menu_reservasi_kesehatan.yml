@@ -1,0 +1,47 @@
+flows:
+  reservasi_kesehatan:
+    name: Reservasi Pemeriksaan Kesehatan
+    description: Membantu pengguna dengan menu reservasi pemeriksaan kesehatan
+    steps:
+      - id: ask_menu
+        collect: menu_reservasi_kesehatan
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 4 opsi untuk reservasi pemeriksaan kesehatan.
+          Opsi yang tersedia: Prosedur Reservasi Kesehatan, Persyaratan Reservasi Kesehatan, Transaksi Reservasi Kesehatan, dan Hasil Reservasi Kesehatan.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_reservasi_kesehatan_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_reservasi_kesehatan_confirmation is false
+            then:
+              - action: utter_menu_reservasi_kesehatan_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_reservasi_kesehatan
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Reservasi Kesehatan"
+            then:
+              - action: utter_answer_prosedur_reservasi_kesehatan
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Reservasi Kesehatan"
+            then:
+              - action: utter_answer_persyaratan_reservasi_kesehatan
+                next: ask_menu
+          - if: slots.return_value = "Transaksi Reservasi Kesehatan"
+            then:
+              - action: utter_answer_transaksi_reservasi_kesehatan
+                next: ask_menu
+          - if: slots.return_value = "Hasil Reservasi Kesehatan"
+            then:
+              - action: utter_answer_hasil_reservasi_kesehatan
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_reservasi_kesehatan
+                next: ask_menu

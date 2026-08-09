@@ -1,0 +1,43 @@
+flows:
+  penyetaraan:
+    name: Penyetaraan
+    description: Membantu pengguna dengan menu penyetaraan nilai / mata kuliah
+    steps:
+      - id: ask_menu
+        collect: menu_penyetaraan
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 3 opsi untuk penyetaraan.
+          Opsi yang tersedia: Prosedur Penyetaraan, Persyaratan Penyetaraan, dan Hasil Penyetaraan.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_penyetaraan_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_penyetaraan_confirmation is false
+            then:
+              - action: utter_menu_penyetaraan_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_penyetaraan
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Penyetaraan"
+            then:
+              - action: utter_answer_prosedur_penyetaraan
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Penyetaraan"
+            then:
+              - action: utter_answer_persyaratan_penyetaraan
+                next: ask_menu
+          - if: slots.return_value = "Hasil Penyetaraan"
+            then:
+              - action: utter_answer_hasil_penyetaraan
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_penyetaraan
+                next: ask_menu

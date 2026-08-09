@@ -1,0 +1,47 @@
+flows:
+  diskon_alumni:
+    name: Diskon Alumni
+    description: Membantu pengguna dengan menu diskon alumni
+    steps:
+      - id: ask_menu
+        collect: menu_diskon_alumni
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 4 opsi untuk diskon alumni.
+          Opsi yang tersedia: Prosedur Diskon Alumni, Persyaratan Diskon Alumni, Transaksi Diskon Alumni, dan Hasil Diskon Alumni.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_diskon_alumni_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_diskon_alumni_confirmation is false
+            then:
+              - action: utter_menu_diskon_alumni_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_diskon_alumni
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Diskon Alumni"
+            then:
+              - action: utter_answer_prosedur_diskon_alumni
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Diskon Alumni"
+            then:
+              - action: utter_answer_persyaratan_diskon_alumni
+                next: ask_menu
+          - if: slots.return_value = "Transaksi Diskon Alumni"
+            then:
+              - action: utter_answer_transaksi_diskon_alumni
+                next: ask_menu
+          - if: slots.return_value = "Hasil Diskon Alumni"
+            then:
+              - action: utter_answer_hasil_diskon_alumni
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_diskon_alumni
+                next: ask_menu

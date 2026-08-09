@@ -1,0 +1,72 @@
+flows:
+  list_menu:
+    description: menampilkan daftar menu layanan seleksi penerimaan mahasiswa baru (SPMB) berdasarkan status login
+    name: list menu options
+    steps:
+      - action: action_check_login_state
+        next:
+          - if: slots.login_state == "login"
+            then:
+              - id: ask_menu_spmb
+                collect: list_menu
+                utter: utter_ask_list_menu_spmb
+                ask_before_filling: true
+                description: Meminta pengguna yang login untuk memilih menu SPMB
+                next:
+                  - if: slots.list_menu == "Pendaftaran"
+                    then:
+                      - link: pendaftaran
+                  - if: slots.list_menu == "Kartu Ujian"
+                    then:
+                      - link: kartu_ujian
+                  - if: slots.list_menu == "Hasil Seleksi"
+                    then:
+                      - link: hasil_seleksi
+                  - if: slots.list_menu == "Perjanjian"
+                    then:
+                      - link: perjanjian
+                  - if: slots.list_menu == "Pembayaran / Keuangan"
+                    then:
+                      - link: pembayaran
+                  - if: slots.list_menu == "Undur Diri"
+                    then:
+                      - link: undur_diri
+                  - if: slots.list_menu == "Pindah Prodi"
+                    then:
+                      - link: pindah_prodi
+                  - if: slots.list_menu == "Diskon Alumni"
+                    then:
+                      - link: diskon_alumni
+                  - if: slots.list_menu == "Penyetaraan"
+                    then:
+                      - link: penyetaraan
+                  - if: slots.list_menu == "Reservasi Pemeriksaan Kesehatan"
+                    then:
+                      - link: reservasi_kesehatan
+                  - else:
+                      - action: utter_answer_error_list_menu
+                        next: ask_menu_spmb
+          - else:
+              - id: ask_menu_not_login
+                collect: list_menu_not_login
+                utter: utter_ask_list_menu_not_login
+                ask_before_filling: true
+                description: Meminta pengguna yang belum login untuk memilih menu info
+                next:
+                  - if: slots.list_menu_not_login == "Info Jadwal Seleksi"
+                    then:
+                      - link: info_jadwal_seleksi
+                  - if: slots.list_menu_not_login == "Info Skema Keuangan"
+                    then:
+                      - link: info_skema_keuangan
+                  - if: slots.list_menu_not_login == "Info Kelengkapan Dokumen Pendaftaran"
+                    then:
+                      - link: info_dokumen_pendaftaran
+                  - if: slots.list_menu_not_login == "Info Kelengkapan Dokumen Registrasi"
+                    then:
+                      - link: info_dokumen_registrasi
+                  - else:
+                      - action: utter_answer_error_list_menu
+                        next: ask_menu_not_login
+
+

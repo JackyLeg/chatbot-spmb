@@ -1,0 +1,18 @@
+flows:
+  info_skema_keuangan:
+    name: Info Skema Keuangan
+    description: Menanyakan tentang skema keuangan, biaya pendaftaran, atau biaya kuliah SPMB
+    steps:
+      - action: action_info_skema_keuangan
+        next:
+          - if: slots.return_value == "Info Skema Keuangan"
+            then:
+              - action: utter_info_skema_keuangan
+                next: end_flow
+          - else: end_flow
+      - id: end_flow
+        set_slots:
+          - list_menu_not_login: null
+        next: go_to_list_menu
+      - id: go_to_list_menu
+        link: list_menu

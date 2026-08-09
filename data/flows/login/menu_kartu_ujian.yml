@@ -1,0 +1,43 @@
+flows:
+  kartu_ujian:
+    name: Kartu Ujian
+    description: Membantu pengguna dengan menu kartu ujian
+    steps:
+      - id: ask_menu
+        collect: menu_kartu_ujian
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 3 opsi untuk kartu ujian.
+          Opsi yang tersedia: Prosedur Kartu Ujian, Persyaratan Kartu Ujian, dan Hasil Kartu Ujian.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_kartu_ujian_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_kartu_ujian_confirmation is false
+            then:
+              - action: utter_menu_kartu_ujian_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_kartu_ujian
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Kartu Ujian"
+            then:
+              - action: utter_answer_prosedur_kartu_ujian
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Kartu Ujian"
+            then:
+              - action: utter_answer_persyaratan_kartu_ujian
+                next: ask_menu
+          - if: slots.return_value = "Hasil Kartu Ujian"
+            then:
+              - action: utter_answer_hasil_kartu_ujian
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_kartu_ujian
+                next: ask_menu

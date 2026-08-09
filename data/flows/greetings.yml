@@ -1,0 +1,22 @@
+flows:
+  greetings:
+    description: menyapa pengguna saat mereka memulai percakapan
+    persisted_slots:
+      - name
+    steps:
+      - collect: name
+        description: nama pengguna
+      - action: utter_greet
+
+  provide_capabilities:
+    description: |
+      menjelaskan apa saja fitur yang tersedia untuk pengguna seleksi penerimaan mahasiswa baru (SPMB),
+      user mungkin bertanya "apa yang bisa kamu lakukan?" atau "fitur apa saja?"
+    steps:
+      - action: utter_provide_info
+
+  provide_introduction:
+    description: |
+      memperkenalkan asisten dan tujuannya untuk seleksi penerimaan mahasiswa baru (SPMB)
+    steps:
+      - action: utter_imabot

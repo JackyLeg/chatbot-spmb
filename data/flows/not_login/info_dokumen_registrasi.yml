@@ -1,0 +1,18 @@
+flows:
+  info_dokumen_registrasi:
+    name: Info Kelengkapan Dokumen Registrasi
+    description: Menanyakan tentang kelengkapan dokumen registrasi atau daftar ulang bagi mahasiswa baru yang diterima
+    steps:
+      - action: action_info_dokumen_registrasi
+        next:
+          - if: slots.return_value == "Info Kelengkapan Dokumen Registrasi"
+            then:
+              - action: utter_info_dokumen_registrasi
+                next: end_flow
+          - else: end_flow
+      - id: end_flow
+        set_slots:
+          - list_menu_not_login: null
+        next: go_to_list_menu
+      - id: go_to_list_menu
+        link: list_menu

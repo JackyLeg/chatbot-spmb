@@ -1,0 +1,47 @@
+flows:
+  pendaftaran:
+    name: Pendaftaran
+    description: Membantu pengguna dengan menu pendaftaran
+    steps:
+      - id: ask_menu
+        collect: menu_pendaftaran
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 4 opsi untuk pendaftaran.
+          Opsi yang tersedia: Prosedur Pendaftaran, Persyaratan Pendaftaran, Transaksi Pendaftaran, dan Hasil Pendaftaran.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_pendaftaran_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_pendaftaran_confirmation is false
+            then:
+              - action: utter_menu_pendaftaran_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_pendaftaran
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Pendaftaran"
+            then:
+              - action: utter_answer_prosedur_pendaftaran
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Pendaftaran"
+            then:
+              - action: utter_answer_persyaratan_pendaftaran
+                next: ask_menu
+          - if: slots.return_value = "Transaksi Pendaftaran"
+            then:
+              - action: utter_answer_transaksi_pendaftaran
+                next: ask_menu
+          - if: slots.return_value = "Hasil Pendaftaran"
+            then:
+              - action: utter_answer_hasil_pendaftaran
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_pendaftaran
+                next: ask_menu

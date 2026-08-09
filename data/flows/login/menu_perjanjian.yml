@@ -1,0 +1,47 @@
+flows:
+  perjanjian:
+    name: Perjanjian
+    description: Membantu pengguna dengan menu perjanjian
+    steps:
+      - id: ask_menu
+        collect: menu_perjanjian
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 4 opsi untuk perjanjian.
+          Opsi yang tersedia: Prosedur Perjanjian, Persyaratan Perjanjian, Transaksi Perjanjian, dan Hasil Perjanjian.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_perjanjian_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_perjanjian_confirmation is false
+            then:
+              - action: utter_menu_perjanjian_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_perjanjian
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Perjanjian"
+            then:
+              - action: utter_answer_prosedur_perjanjian
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Perjanjian"
+            then:
+              - action: utter_answer_persyaratan_perjanjian
+                next: ask_menu
+          - if: slots.return_value = "Transaksi Perjanjian"
+            then:
+              - action: utter_answer_transaksi_perjanjian
+                next: ask_menu
+          - if: slots.return_value = "Hasil Perjanjian"
+            then:
+              - action: utter_answer_hasil_perjanjian
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_perjanjian
+                next: ask_menu

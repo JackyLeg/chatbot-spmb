@@ -1,0 +1,47 @@
+flows:
+  pindah_prodi:
+    name: Pindah Prodi
+    description: Membantu pengguna dengan menu pindah program studi
+    steps:
+      - id: ask_menu
+        collect: menu_pindah_prodi
+        ask_before_filling: true
+        description: |
+          Pengguna harus memilih salah satu dari 4 opsi untuk pindah prodi.
+          Opsi yang tersedia: Prosedur Pindah Prodi, Persyaratan Pindah Prodi, Transaksi Pindah Prodi, dan Hasil Pindah Prodi.
+        next: menu_confirmation
+
+      - id: menu_confirmation
+        collect: menu_pindah_prodi_confirmation
+        ask_before_filling: true
+        next:
+          - if: slots.menu_pindah_prodi_confirmation is false
+            then:
+              - action: utter_menu_pindah_prodi_cancelled
+                next: ask_menu
+          - else: continue_flow
+
+      - id: continue_flow
+        action: action_menu_pindah_prodi
+        next:
+          - if: slots.return_value = "api_success"
+            then: ask_menu
+          - if: slots.return_value = "Prosedur Pindah Prodi"
+            then:
+              - action: utter_answer_prosedur_pindah_prodi
+                next: ask_menu
+          - if: slots.return_value = "Persyaratan Pindah Prodi"
+            then:
+              - action: utter_answer_persyaratan_pindah_prodi
+                next: ask_menu
+          - if: slots.return_value = "Transaksi Pindah Prodi"
+            then:
+              - action: utter_answer_transaksi_pindah_prodi
+                next: ask_menu
+          - if: slots.return_value = "Hasil Pindah Prodi"
+            then:
+              - action: utter_answer_hasil_pindah_prodi
+                next: ask_menu
+          - else:
+              - action: utter_answer_error_pindah_prodi
+                next: ask_menu
