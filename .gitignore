@@ -1,0 +1,20 @@
+.python-version
+.rasa
+.env
+.DS_Store
+.config
+.keras
+.cache
+.vscode
+
+# Rasa models and temporary files
+/models/
+.rasa/
+
+# Python Cache
+/actions/__pycache__/
+__pycache__/
+
+# Local Configuration (usually contains sensitive credentials)
+credentials.yml
+endpoints.yml

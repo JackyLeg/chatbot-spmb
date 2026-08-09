@@ -1,0 +1,47 @@
+services:
+
+  # Run Rasa Pro with the inspector.
+  assistant:
+    image: europe-west3-docker.pkg.dev/rasa-releases/rasa-pro/rasa-pro:3.15.10
+    volumes:
+      - .:/app
+    command:
+      - 'run'
+      - '--enable-api'
+      - '--cors'
+      - '*'
+      - '-p'
+      - '6005'
+    ports:
+      - '6005:6005'
+    env_file:
+      - .env
+    user: root
+
+  assistant-inspect:
+    image: europe-west3-docker.pkg.dev/rasa-releases/rasa-pro/rasa-pro:3.15.10
+    volumes:
+      - .:/app
+    command:
+      - 'inspect'
+      - '-p 6006'
+    ports:
+      - '6006:6006'
+    env_file:
+      - .env
+    user: root
+
+  # Run the action server.
+  action_server:
+    image: europe-west3-docker.pkg.dev/rasa-releases/rasa-pro/rasa-pro:3.15.10
+    volumes:
+      - .:/app
+    command:
+      - 'run'
+      - 'actions'
+      - '-p 6055'
+    ports:
+      - '6055:6055'
+    env_file:
+      - .env
+    user: root
