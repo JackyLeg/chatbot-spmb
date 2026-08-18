@@ -1,14 +1,15 @@
 flows:
   undur_diri:
-    name: Undur Diri
-    description: Membantu pengguna dengan menu undur diri
+    name: Withdrawal
+    description: Help user with withdrawal menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_undur_diri
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk undur diri.
-          Opsi yang tersedia: Prosedur Undur Diri, Persyaratan Undur Diri, Transaksi Undur Diri, dan Hasil Undur Diri.
+          User must select one of 4 options for withdrawal.
+          Options available: Withdrawal Procedure, Withdrawal Requirements, Withdrawal Transaction, and Withdrawal Status.
         next: menu_confirmation
 
       - id: menu_confirmation

@@ -1,0 +1,11 @@
+flows:
+  change_language:
+    name: Change Language
+    description: |
+      User wants to change the conversation language, speak in another language, 
+      or requests to talk in English/Indonesian.
+      User may say: "english", "speak english", "can you speak english", "english pls", "en", "eng", 
+      or "bahasa indonesia", "bahasa", "indo", "pake indo", "id".
+    steps:
+      - action: action_detect_language
+      - action: utter_language_changed

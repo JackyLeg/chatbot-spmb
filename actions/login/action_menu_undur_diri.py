@@ -43,17 +43,17 @@ class MenuUndurDiri(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Undur Diri":
+            case "Prosedur Undur Diri" | "Withdrawal Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "undur_diri_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Undur Diri")]
-            case "Persyaratan Undur Diri":
+            case "Persyaratan Undur Diri" | "Withdrawal Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "undur_diri_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Undur Diri")]
-            case "Transaksi Undur Diri":
+            case "Transaksi Undur Diri" | "Withdrawal Transaction":
                 return [SlotSet("return_value", "Transaksi Undur Diri")]
-            case "Hasil Undur Diri":
+            case "Hasil Undur Diri" | "Withdrawal Status":
                 if fetch_peraturan_api(tracker.sender_id, "undur_diri_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Undur Diri")]

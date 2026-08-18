@@ -34,7 +34,7 @@ class ActionCheckLoginState(Action):
             # except Exception as e:
             #     print(f"Failed to fetch get-role API for login state: {e}")
             #     login_state = "not_login"
-            login_state = "not_login"
+            login_state = "login"
 
         return [SlotSet("login_state", login_state)]
 

@@ -43,15 +43,15 @@ class MenuHasilSeleksi(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Hasil Seleksi":
+            case "Prosedur Hasil Seleksi" | "Selection Results Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "hasil_seleksi_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Hasil Seleksi")]
-            case "Persyaratan Hasil Seleksi":
+            case "Persyaratan Hasil Seleksi" | "Selection Results Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "hasil_seleksi_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Hasil Seleksi")]
-            case "Hasil Hasil Seleksi":
+            case "Hasil Hasil Seleksi" | "Selection Results Status":
                 if fetch_peraturan_api(tracker.sender_id, "hasil_seleksi_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Hasil Seleksi")]

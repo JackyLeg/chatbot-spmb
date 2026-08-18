@@ -43,17 +43,17 @@ class MenuPindahProdi(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Pindah Prodi":
+            case "Prosedur Pindah Prodi" | "Transfer Major Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "pindah_prodi_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Pindah Prodi")]
-            case "Persyaratan Pindah Prodi":
+            case "Persyaratan Pindah Prodi" | "Transfer Major Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "pindah_prodi_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Pindah Prodi")]
-            case "Transaksi Pindah Prodi":
+            case "Transaksi Pindah Prodi" | "Transfer Major Transaction":
                 return [SlotSet("return_value", "Transaksi Pindah Prodi")]
-            case "Hasil Pindah Prodi":
+            case "Hasil Pindah Prodi" | "Transfer Major Status":
                 if fetch_peraturan_api(tracker.sender_id, "pindah_prodi_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Pindah Prodi")]

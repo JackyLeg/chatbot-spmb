@@ -43,17 +43,17 @@ class MenuPembayaran(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Pembayaran":
+            case "Prosedur Pembayaran" | "Payment Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "pembayaran_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Pembayaran")]
-            case "Persyaratan Pembayaran":
+            case "Persyaratan Pembayaran" | "Payment Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "pembayaran_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Pembayaran")]
-            case "Transaksi Pembayaran":
+            case "Transaksi Pembayaran" | "Payment Transaction":
                 return [SlotSet("return_value", "Transaksi Pembayaran")]
-            case "Hasil Pembayaran":
+            case "Hasil Pembayaran" | "Payment Status":
                 if fetch_peraturan_api(tracker.sender_id, "pembayaran_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Pembayaran")]

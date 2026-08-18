@@ -43,17 +43,17 @@ class MenuReservasiKesehatan(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Reservasi Kesehatan":
+            case "Prosedur Reservasi Kesehatan" | "Medical Examination Reservation Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "reservasi_kesehatan_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Reservasi Kesehatan")]
-            case "Persyaratan Reservasi Kesehatan":
+            case "Persyaratan Reservasi Kesehatan" | "Medical Examination Reservation Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "reservasi_kesehatan_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Reservasi Kesehatan")]
-            case "Transaksi Reservasi Kesehatan":
+            case "Transaksi Reservasi Kesehatan" | "Medical Examination Reservation Transaction":
                 return [SlotSet("return_value", "Transaksi Reservasi Kesehatan")]
-            case "Hasil Reservasi Kesehatan":
+            case "Hasil Reservasi Kesehatan" | "Medical Examination Reservation Status":
                 if fetch_peraturan_api(tracker.sender_id, "reservasi_kesehatan_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Reservasi Kesehatan")]

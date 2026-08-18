@@ -6,9 +6,17 @@ actions:
 responses:
   utter_info_dokumen_registrasi:
     - text: |
-        KELENGKAPAN DOKUMEN REGISTRASI / DAFTAR ULANG
-        Calon mahasiswa baru yang dinyatakan LULUS wajib mengunggah:
-        1. Bukti Pembayaran Lunas Biaya Pendidikan Semester 1.
-        2. Ijazah atau Surat Keterangan Lulus (SKL) SMA/SMK/MA legalisir.
-        3. Surat Pernyataan Mahasiswa Baru yang ditandatangani di atas meterai Rp10.000.
-        4. Scan dokumen kesehatan dan tes bebas narkoba dari rumah sakit/klinik resmi.
+        ENROLLMENT / RE-REGISTRATION DOCUMENT CHECKLIST
+        New prospective students declared PASSED are required to upload:
+        1. Proof of Paid in Full Semester 1 Tuition Fees.
+        2. Legalized SMA/SMK/MA high school diploma or Graduation Certificate (SKL).
+        3. New Student Declaration Letter signed on a Rp10,000 stamp duty (meterai).
+        4. Scanned medical check-up and drug-free test documents from an official hospital/clinic.
+      translation:
+        id: |
+          KELENGKAPAN DOKUMEN REGISTRASI / DAFTAR ULANG
+          Calon mahasiswa baru yang dinyatakan LULUS wajib mengunggah:
+          1. Bukti Pembayaran Lunas Biaya Pendidikan Semester 1.
+          2. Ijazah atau Surat Keterangan Lulus (SKL) SMA/SMK/MA legalisir.
+          3. Surat Pernyataan Mahasiswa Baru yang ditandatangani di atas meterai Rp10.000.
+          4. Scan dokumen kesehatan dan tes bebas narkoba dari rumah sakit/klinik resmi.

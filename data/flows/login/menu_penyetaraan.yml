@@ -1,14 +1,15 @@
 flows:
   penyetaraan:
-    name: Penyetaraan
-    description: Membantu pengguna dengan menu penyetaraan nilai / mata kuliah
+    name: Equivalency
+    description: Help user with equivalency menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_penyetaraan
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 3 opsi untuk penyetaraan.
-          Opsi yang tersedia: Prosedur Penyetaraan, Persyaratan Penyetaraan, dan Hasil Penyetaraan.
+          User must select one of 3 options for equivalency.
+          Options available: Equivalency Procedure, Equivalency Requirements, and Equivalency Status.
         next: menu_confirmation
 
       - id: menu_confirmation

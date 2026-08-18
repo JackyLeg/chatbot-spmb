@@ -43,17 +43,17 @@ class MenuPerjanjian(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Perjanjian":
+            case "Prosedur Perjanjian" | "Agreement Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "perjanjian_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Perjanjian")]
-            case "Persyaratan Perjanjian":
+            case "Persyaratan Perjanjian" | "Agreement Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "perjanjian_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Perjanjian")]
-            case "Transaksi Perjanjian":
+            case "Transaksi Perjanjian" | "Agreement Transaction":
                 return [SlotSet("return_value", "Transaksi Perjanjian")]
-            case "Hasil Perjanjian":
+            case "Hasil Perjanjian" | "Agreement Status":
                 if fetch_peraturan_api(tracker.sender_id, "perjanjian_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Perjanjian")]

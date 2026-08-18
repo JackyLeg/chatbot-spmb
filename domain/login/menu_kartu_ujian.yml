@@ -10,6 +10,9 @@ slots:
       - Prosedur Kartu Ujian
       - Persyaratan Kartu Ujian
       - Hasil Kartu Ujian
+      - Exam Card Procedure
+      - Exam Card Requirements
+      - Exam Card Status
     mappings:
       - type: from_llm
 
@@ -20,46 +23,91 @@ slots:
 
 responses:
   utter_ask_menu_kartu_ujian:
-    - text: "Silakan pilih salah satu opsi kartu ujian:"
+    - text: "Please select one of the exam card options:"
+      translation:
+        id: "Silakan pilih salah satu opsi kartu ujian:"
       buttons:
-        - title: "Prosedur Kartu Ujian"
-          payload: "Prosedur Kartu Ujian"
-        - title: "Persyaratan Kartu Ujian"
-          payload: "Persyaratan Kartu Ujian"
-        - title: "Hasil Kartu Ujian"
-          payload: "Hasil Kartu Ujian"
+        - title: "Exam Card Procedure"
+          payload: "Exam Card Procedure"
+          translation:
+            id:
+              title: "Prosedur Kartu Ujian"
+              payload: "Prosedur Kartu Ujian"
+        - title: "Exam Card Requirements"
+          payload: "Exam Card Requirements"
+          translation:
+            id:
+              title: "Persyaratan Kartu Ujian"
+              payload: "Persyaratan Kartu Ujian"
+        - title: "Exam Card Status"
+          payload: "Exam Card Status"
+          translation:
+            id:
+              title: "Hasil Kartu Ujian"
+              payload: "Hasil Kartu Ujian"
 
   utter_ask_menu_kartu_ujian_confirmation:
-    - text: "Anda memilih opsi: {menu_kartu_ujian}. Apakah ini benar?"
+    - text: "You chose option: {menu_kartu_ujian}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_kartu_ujian}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_kartu_ujian_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi kartu ujian."
+    - text: "Selection cancelled. Please select an exam card option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi kartu ujian."
 
   utter_menu_kartu_ujian_ok:
-    - text: "Anda telah memilih opsi kartu ujian: {menu_kartu_ujian}."
+    - text: "You have selected the exam card option: {menu_kartu_ujian}."
+      translation:
+        id: "Anda telah memilih opsi kartu ujian: {menu_kartu_ujian}."
 
   utter_answer_prosedur_kartu_ujian:
     - text: |
-        PROSEDUR CETAK KARTU PESERTA UJIAN
-        1. Login ke akun portal SPMB Trisakti Anda.
-        2. Masuk ke halaman dashboard peserta.
-        3. Klik menu "Cetak Kartu Ujian" setelah status pembayaran pendaftaran terverifikasi.
-        4. Simpan berkas PDF atau cetak fisik kartu ujian untuk dibawa saat hari pelaksanaan ujian.
+        EXAM CARD PRINTING PROCEDURE
+        1. Log in to your SPMB Trisakti portal account.
+        2. Go to the applicant dashboard page.
+        3. Click the "Print Exam Card" menu after the registration payment status is verified.
+        4. Save the PDF file or print a physical exam card to bring on the day of the exam.
+      translation:
+        id: |
+          PROSEDUR CETAK KARTU PESERTA UJIAN
+          1. Login ke akun portal SPMB Trisakti Anda.
+          2. Masuk ke halaman dashboard peserta.
+          3. Klik menu "Cetak Kartu Ujian" setelah status pembayaran pendaftaran terverifikasi.
+          4. Simpan berkas PDF atau cetak fisik kartu ujian untuk dibawa saat hari pelaksanaan ujian.
 
   utter_answer_persyaratan_kartu_ujian:
     - text: |
-        PERSYARATAN KARTU UJIAN
-        1. Status pembayaran formulir pendaftaran telah lunas dan terverifikasi di sistem keuangan.
-        2. Seluruh data biodata wajib pada formulir pendaftaran telah diisi dengan lengkap.
-        3. Dokumen foto peserta berformat resmi telah berhasil diunggah.
+        EXAM CARD REQUIREMENTS
+        1. Registration form payment status is paid in full and verified in the financial system.
+        2. All required profile data on the registration form has been completely filled.
+        3. Official participant photo document has been successfully uploaded.
+      translation:
+        id: |
+          PERSYARATAN KARTU UJIAN
+          1. Status pembayaran formulir pendaftaran telah lunas dan terverifikasi di sistem keuangan.
+          2. Seluruh data biodata wajib pada formulir pendaftaran telah diisi dengan lengkap.
+          3. Dokumen foto peserta berformat resmi telah berhasil diunggah.
 
   utter_answer_hasil_kartu_ujian:
-    - text: "Kartu Ujian Anda telah diterbitkan. Silakan unduh melalui dashboard akun SPMB Anda."
+    - text: "Your Exam Card has been issued. Please download it via your SPMB account dashboard."
+      translation:
+        id: "Kartu Ujian Anda telah diterbitkan. Silakan unduh melalui dashboard akun SPMB Anda."
 
   utter_answer_error_kartu_ujian:
-    - text: "Maaf, terjadi kesalahan pada menu kartu ujian. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the exam card menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu kartu ujian. Silakan coba lagi."

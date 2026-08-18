@@ -1,14 +1,15 @@
 flows:
   diskon_alumni:
-    name: Diskon Alumni
-    description: Membantu pengguna dengan menu diskon alumni
+    name: Alumni Discount
+    description: Help user with alumni discount menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_diskon_alumni
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk diskon alumni.
-          Opsi yang tersedia: Prosedur Diskon Alumni, Persyaratan Diskon Alumni, Transaksi Diskon Alumni, dan Hasil Diskon Alumni.
+          User must select one of 4 options for alumni discount.
+          Options available: Alumni Discount Procedure, Alumni Discount Requirements, Alumni Discount Transaction, and Alumni Discount Results.
         next: menu_confirmation
 
       - id: menu_confirmation

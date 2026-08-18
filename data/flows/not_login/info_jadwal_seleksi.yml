@@ -1,8 +1,9 @@
 flows:
   info_jadwal_seleksi:
     name: Info Jadwal Seleksi
-    description: Menanyakan tentang informasi jadwal seleksi pendaftaran mahasiswa baru (SPMB)
+    description: Ask about admission selection schedule information for new student admission (SPMB)
     steps:
+      - action: action_detect_language
       - action: action_info_jadwal_seleksi
         next:
           - if: slots.return_value == "Info Jadwal Seleksi"

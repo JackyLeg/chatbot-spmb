@@ -43,15 +43,15 @@ class MenuPenyetaraan(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Penyetaraan":
+            case "Prosedur Penyetaraan" | "Equivalency Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "penyetaraan_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Penyetaraan")]
-            case "Persyaratan Penyetaraan":
+            case "Persyaratan Penyetaraan" | "Equivalency Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "penyetaraan_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Penyetaraan")]
-            case "Hasil Penyetaraan":
+            case "Hasil Penyetaraan" | "Equivalency Status":
                 if fetch_peraturan_api(tracker.sender_id, "penyetaraan_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Penyetaraan")]

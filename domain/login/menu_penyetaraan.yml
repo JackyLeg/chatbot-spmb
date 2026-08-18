@@ -10,6 +10,9 @@ slots:
       - Prosedur Penyetaraan
       - Persyaratan Penyetaraan
       - Hasil Penyetaraan
+      - Equivalency Procedure
+      - Equivalency Requirements
+      - Equivalency Status
     mappings:
       - type: from_llm
 
@@ -20,48 +23,95 @@ slots:
 
 responses:
   utter_ask_menu_penyetaraan:
-    - text: "Silakan pilih salah satu opsi penyetaraan:"
+    - text: "Please select one of the equivalency options:"
+      translation:
+        id: "Silakan pilih salah satu opsi penyetaraan:"
       buttons:
-        - title: "Prosedur Penyetaraan"
-          payload: "Prosedur Penyetaraan"
-        - title: "Persyaratan Penyetaraan"
-          payload: "Persyaratan Penyetaraan"
-        - title: "Hasil Penyetaraan"
-          payload: "Hasil Penyetaraan"
+        - title: "Equivalency Procedure"
+          payload: "Equivalency Procedure"
+          translation:
+            id:
+              title: "Prosedur Penyetaraan"
+              payload: "Prosedur Penyetaraan"
+        - title: "Equivalency Requirements"
+          payload: "Equivalency Requirements"
+          translation:
+            id:
+              title: "Persyaratan Penyetaraan"
+              payload: "Persyaratan Penyetaraan"
+        - title: "Equivalency Status"
+          payload: "Equivalency Status"
+          translation:
+            id:
+              title: "Hasil Penyetaraan"
+              payload: "Hasil Penyetaraan"
 
   utter_ask_menu_penyetaraan_confirmation:
-    - text: "Anda memilih opsi: {menu_penyetaraan}. Apakah ini benar?"
+    - text: "You chose option: {menu_penyetaraan}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_penyetaraan}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_penyetaraan_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi penyetaraan."
+    - text: "Selection cancelled. Please select an equivalency option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi penyetaraan."
 
   utter_menu_penyetaraan_ok:
-    - text: "Anda telah memilih opsi penyetaraan: {menu_penyetaraan}."
+    - text: "You have selected the equivalency option: {menu_penyetaraan}."
+      translation:
+        id: "Anda telah memilih opsi penyetaraan: {menu_penyetaraan}."
 
   utter_answer_prosedur_penyetaraan:
     - text: |
-        PROSEDUR PENYETARAAN MATA KULIAH / NILAI (BAGI PINDAHAN/LANJUT JENIS)
-        1. Login ke portal SPMB Trisakti Anda.
-        2. Pilih menu pengajuan penyetaraan mata kuliah.
-        3. Isi data asal universitas dan unggah transkrip nilai resmi yang diperoleh sebelumnya.
-        4. Program studi tujuan akan melakukan penilaian konversi mata kuliah yang diakui.
-        5. Hasil penyetaraan nilai konversi akan diterbitkan dalam bentuk Surat Keterangan Penyetaraan.
+        COURSE / GRADE EQUIVALENCY PROCEDURE (FOR TRANSFER/EXTENSION PATH)
+        1. Log in to your SPMB Trisakti portal.
+        2. Select the course equivalency application menu.
+        3. Enter your previous university data and upload your official academic transcript obtained earlier.
+        4. The destination study program will assess and determine the conversion of recognized courses.
+        5. The course equivalency result will be issued as a Course Equivalency Certificate.
+      translation:
+        id: |
+          PROSEDUR PENYETARAAN MATA KULIAH / NILAI (BAGI PINDAHAN/LANJUT JENIS)
+          1. Login ke portal SPMB Trisakti Anda.
+          2. Pilih menu pengajuan penyetaraan mata kuliah.
+          3. Isi data asal universitas dan unggah transkrip nilai resmi yang diperoleh sebelumnya.
+          4. Program studi tujuan akan melakukan penilaian konversi mata kuliah yang diakui.
+          5. Hasil penyetaraan nilai konversi akan diterbitkan dalam bentuk Surat Keterangan Penyetaraan.
 
   utter_answer_persyaratan_penyetaraan:
     - text: |
-        PERSYARATAN PENYETARAAN
-        1. Transkrip nilai resmi akademik dari perguruan tinggi asal.
-        2. Surat Keterangan Pindah atau surat pengantar resmi dari kampus asal.
-        3. Silabus mata kuliah yang pernah ditempuh di kampus asal (jika diminta oleh program studi tujuan).
-        4. Terdaftar secara resmi di PDDikti (Pangkalan Data Pendidikan Tinggi).
+        EQUIVALENCY REQUIREMENTS
+        1. Official academic transcript from the origin university.
+        2. Transfer Certificate or an official cover letter from the origin campus.
+        3. Syllabus of courses completed at the origin campus (if requested by the destination study program).
+        4. Officially registered in PDDikti (Higher Education Database).
+      translation:
+        id: |
+          PERSYARATAN PENYETARAAN
+          1. Transkrip nilai resmi akademik dari perguruan tinggi asal.
+          2. Surat Keterangan Pindah atau surat pengantar resmi dari kampus asal.
+          3. Silabus mata kuliah yang pernah ditempuh di kampus asal (jika diminta oleh program studi tujuan).
+          4. Terdaftar secara resmi di PDDikti (Pangkalan Data Pendidikan Tinggi).
 
   utter_answer_hasil_penyetaraan:
-    - text: "Hasil konversi penyetaraan nilai mata kuliah Anda telah selesai dinilai oleh program studi."
+    - text: "The grade conversion equivalency process has been finalized and graded by the study program."
+      translation:
+        id: "Hasil konversi penyetaraan nilai mata kuliah Anda telah selesai dinilai oleh program studi."
 
   utter_answer_error_penyetaraan:
-    - text: "Maaf, terjadi kesalahan pada menu penyetaraan. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the equivalency menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu penyetaraan. Silakan coba lagi."

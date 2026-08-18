@@ -1,5 +1,7 @@
 recipe: default.v1
 language: id
+additional_languages:
+  - en
 assistant_id: chatbot-spmb
 pipeline:
 - name: CompactLLMCommandGenerator

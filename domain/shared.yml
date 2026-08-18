@@ -2,6 +2,7 @@ version: "3.1"
 
 actions:
   - action_check_login_state
+  - action_detect_language
 
 slots:
   name:
@@ -24,20 +25,40 @@ slots:
 
 responses:
   utter_ask_name:
-    - text: "Siapa nama Anda?"
+    - text: "What is your name?"
+      translation:
+        id: "Siapa nama Anda?"
     
   utter_greet:
-    - text: "Halo, {name}! Bagaimana saya bisa membantu Anda hari ini di portal SPMB?"
+    - text: "Hello, {name}! How can I help you today at the SPMB portal?"
+      translation:
+        id: "Halo, {name}! Bagaimana saya bisa membantu Anda hari ini di portal SPMB?"
 
   utter_provide_info:
     - text: |
-        Saya dapat membantu memberikan informasi terkait Seleksi Penerimaan Mahasiswa Baru (SPMB) Universitas Trisakti.
-        Anda dapat bertanya tentang:
-        - Pendaftaran, Kartu Ujian, Hasil Seleksi
-        - Perjanjian, Pembayaran/Keuangan
-        - Undur Diri, Pindah Prodi, Penyetaraan
-        - Diskon Alumni, Reservasi Pemeriksaan Kesehatan
-        Atau ketik "menu" untuk melihat daftar menu lengkap.
+        I can help provide information regarding the Seleksi Penerimaan Mahasiswa Baru (SPMB) Universitas Trisakti.
+        You can ask about:
+        - Admission, Exam Card, Selection Results
+        - Agreement, Payment/Finance
+        - Withdrawal, Transfer Major, Equivalency
+        - Alumni Discount, Medical Examination Reservation
+        Or type "menu" to see the complete menu list.
+      translation:
+        id: |
+          Saya dapat membantu memberikan informasi terkait Seleksi Penerimaan Mahasiswa Baru (SPMB) Universitas Trisakti.
+          Anda dapat bertanya tentang:
+          - Pendaftaran, Kartu Ujian, Hasil Seleksi
+          - Perjanjian, Pembayaran/Keuangan
+          - Undur Diri, Pindah Prodi, Penyetaraan
+          - Diskon Alumni, Reservasi Pemeriksaan Kesehatan
+          Atau ketik "menu" untuk melihat daftar menu lengkap.
 
   utter_imabot:
-    - text: "Saya adalah SPMBBot, asisten virtual Anda untuk proses Penerimaan Mahasiswa Baru Universitas Trisakti."
+    - text: "I am SPMBBot, your virtual assistant for the Universitas Trisakti New Student Admission process."
+      translation:
+        id: "Saya adalah SPMBBot, asisten virtual Anda untuk proses Penerimaan Mahasiswa Baru Universitas Trisakti."
+
+  utter_language_changed:
+    - text: "I will now speak in English. How can I help you?"
+      translation:
+        id: "Saya sekarang akan menggunakan bahasa Indonesia. Ada yang bisa saya bantu?"

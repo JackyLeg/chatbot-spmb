@@ -10,6 +10,9 @@ slots:
       - Prosedur Hasil Seleksi
       - Persyaratan Hasil Seleksi
       - Hasil Hasil Seleksi
+      - Selection Results Procedure
+      - Selection Results Requirements
+      - Selection Results Status
     mappings:
       - type: from_llm
 
@@ -20,46 +23,91 @@ slots:
 
 responses:
   utter_ask_menu_hasil_seleksi:
-    - text: "Silakan pilih salah satu opsi hasil seleksi:"
+    - text: "Please select one of the selection results options:"
+      translation:
+        id: "Silakan pilih salah satu opsi hasil seleksi:"
       buttons:
-        - title: "Prosedur Hasil Seleksi"
-          payload: "Prosedur Hasil Seleksi"
-        - title: "Persyaratan Hasil Seleksi"
-          payload: "Persyaratan Hasil Seleksi"
-        - title: "Hasil Hasil Seleksi"
-          payload: "Hasil Hasil Seleksi"
+        - title: "Selection Results Procedure"
+          payload: "Selection Results Procedure"
+          translation:
+            id:
+              title: "Prosedur Hasil Seleksi"
+              payload: "Prosedur Hasil Seleksi"
+        - title: "Selection Results Requirements"
+          payload: "Selection Results Requirements"
+          translation:
+            id:
+              title: "Persyaratan Hasil Seleksi"
+              payload: "Persyaratan Hasil Seleksi"
+        - title: "Selection Results Status"
+          payload: "Selection Results Status"
+          translation:
+            id:
+              title: "Hasil Hasil Seleksi"
+              payload: "Hasil Hasil Seleksi"
 
   utter_ask_menu_hasil_seleksi_confirmation:
-    - text: "Anda memilih opsi: {menu_hasil_seleksi}. Apakah ini benar?"
+    - text: "You chose option: {menu_hasil_seleksi}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_hasil_seleksi}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_hasil_seleksi_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi hasil seleksi."
+    - text: "Selection cancelled. Please select a selection results option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi hasil seleksi."
 
   utter_menu_hasil_seleksi_ok:
-    - text: "Anda telah memilih opsi hasil seleksi: {menu_hasil_seleksi}."
+    - text: "You have selected the selection results option: {menu_hasil_seleksi}."
+      translation:
+        id: "Anda telah memilih opsi hasil seleksi: {menu_hasil_seleksi}."
 
   utter_answer_prosedur_hasil_seleksi:
     - text: |
-        PROSEDUR MELIHAT PENGUMUMAN HASIL SELEKSI
-        1. Pengumuman hasil seleksi dipublikasikan sesuai dengan tanggal yang telah dijadwalkan pada masing-masing gelombang.
-        2. Buka portal pengumuman SPMB Universitas Trisakti.
-        3. Masukkan nomor pendaftaran atau email akun Anda.
-        4. Sistem akan menampilkan keputusan kelulusan Anda pada prodi pilihan.
+        PROCEDURE FOR VIEWING SELECTION RESULTS ANNOUNCEMENT
+        1. The selection results announcement is published according to the scheduled date for each wave.
+        2. Open the Universitas Trisakti SPMB announcement portal.
+        3. Enter your registration number or account email.
+        4. The system will display your graduation status on the chosen study program.
+      translation:
+        id: |
+          PROSEDUR MELIHAT PENGUMUMAN HASIL SELEKSI
+          1. Pengumuman hasil seleksi dipublikasikan sesuai dengan tanggal yang telah dijadwalkan pada masing-masing gelombang.
+          2. Buka portal pengumuman SPMB Universitas Trisakti.
+          3. Masukkan nomor pendaftaran atau email akun Anda.
+          4. Sistem akan menampilkan keputusan kelulusan Anda pada prodi pilihan.
 
   utter_answer_persyaratan_hasil_seleksi:
     - text: |
-        PERSYARATAN PENGUMUMAN HASIL SELEKSI
-        1. Ujian seleksi masuk telah selesai dilaksanakan (bagi jalur ujian tertulis/ujian keterampilan).
-        2. Hasil verifikasi rapor dan berkas prestasi telah dirampungkan (bagi jalur prestasi).
-        3. Nilai tes seleksi telah diverifikasi oleh panitia SPMB.
+        SELECTION RESULTS ANNOUNCEMENT REQUIREMENTS
+        1. The entrance selection exam has been completed (for the written exam/skills test path).
+        2. Verification results of report cards and achievement documents have been finalized (for the achievement path).
+        3. Selection test scores have been verified by the SPMB committee.
+      translation:
+        id: |
+          PERSYARATAN PENGUMUMAN HASIL SELEKSI
+          1. Ujian seleksi masuk telah selesai dilaksanakan (bagi jalur ujian tertulis/ujian keterampilan).
+          2. Hasil verifikasi rapor dan berkas prestasi telah dirampungkan (bagi jalur prestasi).
+          3. Nilai tes seleksi telah diverifikasi oleh panitia SPMB.
 
   utter_answer_hasil_hasil_seleksi:
-    - text: "Hasil seleksi pendaftaran Anda telah diterbitkan. Silakan cek status kelulusan di portal SPMB."
+    - text: "Your registration selection results have been published. Please check your graduation status on the SPMB portal."
+      translation:
+        id: "Hasil seleksi pendaftaran Anda telah diterbitkan. Silakan cek status kelulusan di portal SPMB."
 
   utter_answer_error_hasil_seleksi:
-    - text: "Maaf, terjadi kesalahan pada menu hasil seleksi. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the selection results menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu hasil seleksi. Silakan coba lagi."

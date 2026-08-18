@@ -1,8 +1,9 @@
 flows:
   info_dokumen_registrasi:
     name: Info Kelengkapan Dokumen Registrasi
-    description: Menanyakan tentang kelengkapan dokumen registrasi atau daftar ulang bagi mahasiswa baru yang diterima
+    description: Ask about enrollment/re-registration document requirements for passed students
     steps:
+      - action: action_detect_language
       - action: action_info_dokumen_registrasi
         next:
           - if: slots.return_value == "Info Kelengkapan Dokumen Registrasi"

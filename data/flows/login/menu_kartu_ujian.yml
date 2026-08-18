@@ -1,14 +1,15 @@
 flows:
   kartu_ujian:
-    name: Kartu Ujian
-    description: Membantu pengguna dengan menu kartu ujian
+    name: Exam Card
+    description: Help user with exam card menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_kartu_ujian
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 3 opsi untuk kartu ujian.
-          Opsi yang tersedia: Prosedur Kartu Ujian, Persyaratan Kartu Ujian, dan Hasil Kartu Ujian.
+          User must select one of 3 options for exam card.
+          Options available: Exam Card Procedure, Exam Card Requirements, and Exam Card Status.
         next: menu_confirmation
 
       - id: menu_confirmation

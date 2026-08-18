@@ -11,6 +11,10 @@ slots:
       - Persyaratan Diskon Alumni
       - Transaksi Diskon Alumni
       - Hasil Diskon Alumni
+      - Alumni Discount Procedure
+      - Alumni Discount Requirements
+      - Alumni Discount Transaction
+      - Alumni Discount Results
     mappings:
       - type: from_llm
 
@@ -19,55 +23,110 @@ slots:
     mappings:
       - type: from_llm
 
+# id_login = tracker.get_slot("npm")
+
 responses:
   utter_ask_menu_diskon_alumni:
-    - text: "Silakan pilih salah satu opsi diskon alumni:"
+    - text: "Please select one of the alumni discount options:"
+      translation:
+        id: "Silakan pilih salah satu opsi diskon alumni:"
       buttons:
-        - title: "Prosedur Diskon Alumni"
-          payload: "Prosedur Diskon Alumni"
-        - title: "Persyaratan Diskon Alumni"
-          payload: "Persyaratan Diskon Alumni"
-        - title: "Transaksi Diskon Alumni"
-          payload: "Transaksi Diskon Alumni"
-        - title: "Hasil Diskon Alumni"
-          payload: "Hasil Diskon Alumni"
+        - title: "Alumni Discount Procedure"
+          payload: "Alumni Discount Procedure"
+          translation:
+            id:
+              title: "Prosedur Diskon Alumni"
+              payload: "Prosedur Diskon Alumni"
+        - title: "Alumni Discount Requirements"
+          payload: "Alumni Discount Requirements"
+          translation:
+            id:
+              title: "Persyaratan Diskon Alumni"
+              payload: "Persyaratan Diskon Alumni"
+        - title: "Alumni Discount Transaction"
+          payload: "Alumni Discount Transaction"
+          translation:
+            id:
+              title: "Transaksi Diskon Alumni"
+              payload: "Transaksi Diskon Alumni"
+        - title: "Alumni Discount Results"
+          payload: "Alumni Discount Results"
+          translation:
+            id:
+              title: "Hasil Diskon Alumni"
+              payload: "Hasil Diskon Alumni"
 
   utter_ask_menu_diskon_alumni_confirmation:
-    - text: "Anda memilih opsi: {menu_diskon_alumni}. Apakah ini benar?"
+    - text: "You chose option: {menu_diskon_alumni}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_diskon_alumni}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_diskon_alumni_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi diskon alumni."
+    - text: "Selection cancelled. Please select an alumni discount option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi diskon alumni."
 
   utter_menu_diskon_alumni_ok:
-    - text: "Anda telah memilih opsi diskon alumni: {menu_diskon_alumni}."
+    - text: "You have selected the alumni discount option: {menu_diskon_alumni}."
+      translation:
+        id: "Anda telah memilih opsi diskon alumni: {menu_diskon_alumni}."
 
   utter_answer_prosedur_diskon_alumni:
     - text: |
-        PROSEDUR PENGAJUAN DISKON BIAYA KULIAH JALUR ALUMNI/KELUARGA ALUMNI
-        1. Login ke portal SPMB Trisakti Anda.
-        2. Pilih menu pengajuan potongan biaya pendidikan (Diskon Alumni).
-        3. Isi data hubungan kekeluargaan dengan alumni Universitas Trisakti.
-        4. Unggah dokumen bukti alumni (Ijazah/Kartu Alumni/KK).
-        5. Tim administrasi keuangan akan memverifikasi keabsahan data untuk persetujuan pemotongan biaya.
+        ALUMNI/ALUMNI FAMILY PATH TUITION DISCOUNT APPLICATION PROCEDURE
+        1. Log in to your SPMB Trisakti portal.
+        2. Select the tuition fee discount application menu (Alumni Discount).
+        3. Fill in the family relationship data with Universitas Trisakti alumni.
+        4. Upload alumni proof documents (Diploma/Alumni Card/Family Card).
+        5. The financial administration team will verify the validity of the data for tuition discount approval.
+      translation:
+        id: |
+          PROSEDUR PENGAJUAN DISKON BIAYA KULIAH JALUR ALUMNI/KELUARGA ALUMNI
+          1. Login ke portal SPMB Trisakti Anda.
+          2. Pilih menu pengajuan potongan biaya pendidikan (Diskon Alumni).
+          3. Isi data hubungan kekeluargaan dengan alumni Universitas Trisakti.
+          4. Unggah dokumen bukti alumni (Ijazah/Kartu Alumni/KK).
+          5. Tim administrasi keuangan akan memverifikasi keabsahan data untuk persetujuan pemotongan biaya.
 
   utter_answer_persyaratan_diskon_alumni:
     - text: |
-        PERSYARATAN DISKON ALUMNI
-        1. Pendaftar adalah anak kandung atau saudara kandung dari alumni Universitas Trisakti.
-        2. Fotokopi Ijazah Universitas Trisakti milik orang tua/saudara kandung yang bersangkutan.
-        3. Kartu Keluarga (KK) asli sebagai bukti hubungan kekeluargaan.
-        4. Kartu Anggota Ikatan Alumni Trisakti (jika ada).
+        ALUMNI DISCOUNT REQUIREMENTS
+        1. Applicant is a biological child or biological sibling of a Universitas Trisakti alumnus.
+        2. Photocopy of Universitas Trisakti Diploma belonging to the parent/biological sibling.
+        3. Original Family Card (KK) as proof of family relationship.
+        4. Trisakti Alumni Association Member Card (if any).
+      translation:
+        id: |
+          PERSYARATAN DISKON ALUMNI
+          1. Pendaftar adalah anak kandung atau saudara kandung dari alumni Universitas Trisakti.
+          2. Fotokopi Ijazah Universitas Trisakti milik orang tua/saudara kandung yang bersangkutan.
+          3. Kartu Keluarga (KK) asli sebagai bukti hubungan kekeluargaan.
+          4. Kartu Anggota Ikatan Alumni Trisakti (jika ada).
 
   utter_answer_transaksi_diskon_alumni:
-    - text: "Silakan kirimkan dokumen bukti kekeluargaan alumni Anda untuk kami verifikasi potongan biaya."
+    - text: "Please submit your alumni family proof documents for discount verification."
+      translation:
+        id: "Silakan kirimkan dokumen bukti kekeluargaan alumni Anda untuk kami verifikasi potongan biaya."
 
   utter_answer_hasil_diskon_alumni:
-    - text: "Pengajuan diskon biaya pendidikan jalur alumni Anda sedang diverifikasi oleh biro keuangan."
+    - text: "Your alumni path tuition fee discount application is currently being verified by the financial bureau."
+      translation:
+        id: "Pengajuan diskon biaya pendidikan jalur alumni Anda sedang diverifikasi oleh biro keuangan."
 
   utter_answer_error_diskon_alumni:
-    - text: "Maaf, terjadi kesalahan pada menu diskon alumni. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the alumni discount menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu diskon alumni. Silakan coba lagi."

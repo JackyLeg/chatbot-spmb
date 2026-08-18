@@ -43,17 +43,17 @@ class MenuPendaftaran(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Pendaftaran":
+            case "Prosedur Pendaftaran" | "Admission Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "pendaftaran_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Pendaftaran")]
-            case "Persyaratan Pendaftaran":
+            case "Persyaratan Pendaftaran" | "Admission Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "pendaftaran_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Pendaftaran")]
-            case "Transaksi Pendaftaran":
+            case "Transaksi Pendaftaran" | "Admission Transaction":
                 return [SlotSet("return_value", "Transaksi Pendaftaran")]
-            case "Hasil Pendaftaran":
+            case "Hasil Pendaftaran" | "Admission Status":
                 if fetch_peraturan_api(tracker.sender_id, "pendaftaran_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Pendaftaran")]

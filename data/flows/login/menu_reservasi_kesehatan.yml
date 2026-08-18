@@ -1,14 +1,15 @@
 flows:
   reservasi_kesehatan:
-    name: Reservasi Pemeriksaan Kesehatan
-    description: Membantu pengguna dengan menu reservasi pemeriksaan kesehatan
+    name: Medical Examination Reservation
+    description: Help user with medical examination reservation menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_reservasi_kesehatan
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk reservasi pemeriksaan kesehatan.
-          Opsi yang tersedia: Prosedur Reservasi Kesehatan, Persyaratan Reservasi Kesehatan, Transaksi Reservasi Kesehatan, dan Hasil Reservasi Kesehatan.
+          User must select one of 4 options for medical examination reservation.
+          Options available: Medical Examination Reservation Procedure, Medical Examination Reservation Requirements, Medical Examination Reservation Transaction, and Medical Examination Reservation Status.
         next: menu_confirmation
 
       - id: menu_confirmation

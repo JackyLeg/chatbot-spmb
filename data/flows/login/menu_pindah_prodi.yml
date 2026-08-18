@@ -1,14 +1,15 @@
 flows:
   pindah_prodi:
-    name: Pindah Prodi
-    description: Membantu pengguna dengan menu pindah program studi
+    name: Transfer Major
+    description: Help user with transfer major menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_pindah_prodi
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk pindah prodi.
-          Opsi yang tersedia: Prosedur Pindah Prodi, Persyaratan Pindah Prodi, Transaksi Pindah Prodi, dan Hasil Pindah Prodi.
+          User must select one of 4 options for transfer major.
+          Options available: Transfer Major Procedure, Transfer Major Requirements, Transfer Major Transaction, and Transfer Major Status.
         next: menu_confirmation
 
       - id: menu_confirmation

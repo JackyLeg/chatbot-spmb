@@ -1,8 +1,9 @@
 flows:
   info_skema_keuangan:
     name: Info Skema Keuangan
-    description: Menanyakan tentang skema keuangan, biaya pendaftaran, atau biaya kuliah SPMB
+    description: Ask about financial schemes, registration fees, or tuition fees for SPMB
     steps:
+      - action: action_detect_language
       - action: action_info_skema_keuangan
         next:
           - if: slots.return_value == "Info Skema Keuangan"

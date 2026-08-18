@@ -1,14 +1,15 @@
 flows:
   pendaftaran:
-    name: Pendaftaran
-    description: Membantu pengguna dengan menu pendaftaran
+    name: Admission
+    description: Help user with admission menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_pendaftaran
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk pendaftaran.
-          Opsi yang tersedia: Prosedur Pendaftaran, Persyaratan Pendaftaran, Transaksi Pendaftaran, dan Hasil Pendaftaran.
+          User must select one of 4 options for admission.
+          Options available: Admission Procedure, Admission Requirements, Admission Transaction, and Admission Status.
         next: menu_confirmation
 
       - id: menu_confirmation

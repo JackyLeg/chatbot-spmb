@@ -11,6 +11,10 @@ slots:
       - Persyaratan Pindah Prodi
       - Transaksi Pindah Prodi
       - Hasil Pindah Prodi
+      - Transfer Major Procedure
+      - Transfer Major Requirements
+      - Transfer Major Transaction
+      - Transfer Major Status
     mappings:
       - type: from_llm
 
@@ -21,52 +25,104 @@ slots:
 
 responses:
   utter_ask_menu_pindah_prodi:
-    - text: "Silakan pilih salah satu opsi pindah prodi:"
+    - text: "Please select one of the transfer major options:"
+      translation:
+        id: "Silakan pilih salah satu opsi pindah prodi:"
       buttons:
-        - title: "Prosedur Pindah Prodi"
-          payload: "Prosedur Pindah Prodi"
-        - title: "Persyaratan Pindah Prodi"
-          payload: "Persyaratan Pindah Prodi"
-        - title: "Transaksi Pindah Prodi"
-          payload: "Transaksi Pindah Prodi"
-        - title: "Hasil Pindah Prodi"
-          payload: "Hasil Pindah Prodi"
+        - title: "Transfer Major Procedure"
+          payload: "Transfer Major Procedure"
+          translation:
+            id:
+              title: "Prosedur Pindah Prodi"
+              payload: "Prosedur Pindah Prodi"
+        - title: "Transfer Major Requirements"
+          payload: "Transfer Major Requirements"
+          translation:
+            id:
+              title: "Persyaratan Pindah Prodi"
+              payload: "Persyaratan Pindah Prodi"
+        - title: "Transfer Major Transaction"
+          payload: "Transfer Major Transaction"
+          translation:
+            id:
+              title: "Transaksi Pindah Prodi"
+              payload: "Transaksi Pindah Prodi"
+        - title: "Transfer Major Status"
+          payload: "Transfer Major Status"
+          translation:
+            id:
+              title: "Hasil Pindah Prodi"
+              payload: "Hasil Pindah Prodi"
 
   utter_ask_menu_pindah_prodi_confirmation:
-    - text: "Anda memilih opsi: {menu_pindah_prodi}. Apakah ini benar?"
+    - text: "You chose option: {menu_pindah_prodi}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_pindah_prodi}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_pindah_prodi_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi pindah prodi."
+    - text: "Selection cancelled. Please select a transfer major option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi pindah prodi."
 
   utter_menu_pindah_prodi_ok:
-    - text: "Anda telah memilih opsi pindah prodi: {menu_pindah_prodi}."
+    - text: "You have selected the transfer major option: {menu_pindah_prodi}."
+      translation:
+        id: "Anda telah memilih opsi pindah prodi: {menu_pindah_prodi}."
 
   utter_answer_prosedur_pindah_prodi:
     - text: |
-        PROSEDUR PINDAH PROGRAM STUDI (SEBELUM KULIAH DIMULAI)
-        1. Login ke portal SPMB Trisakti Anda.
-        2. Masuk ke halaman pengajuan perubahan program studi.
-        3. Isi formulir permohonan pindah program studi dengan memilih prodi baru yang dituju.
-        4. Bayar biaya administrasi perpindahan prodi jika diperlukan.
-        5. Tunggu proses seleksi internal atau verifikasi kecocokan nilai ujian seleksi Anda dengan batas minimal (passing grade) prodi baru.
+        STUDY PROGRAM TRANSFER PROCEDURE (BEFORE CLASSES START)
+        1. Log in to your SPMB Trisakti portal.
+        2. Enter the study program change application page.
+        3. Fill out the study program transfer request form by selecting the new target study program.
+        4. Pay the program transfer administration fee if required.
+        5. Wait for the internal selection process or verification of your exam scores suitability with the minimum threshold (passing grade) of the new program.
+      translation:
+        id: |
+          PROSEDUR PINDAH PROGRAM STUDI (SEBELUM KULIAH DIMULAI)
+          1. Login ke portal SPMB Trisakti Anda.
+          2. Masuk ke halaman pengajuan perubahan program studi.
+          3. Isi formulir permohonan pindah program studi dengan memilih prodi baru yang dituju.
+          4. Bayar biaya administrasi perpindahan prodi jika diperlukan.
+          5. Tunggu proses seleksi internal atau verifikasi kecocokan nilai ujian seleksi Anda dengan batas minimal (passing grade) prodi baru.
 
   utter_answer_persyaratan_pindah_prodi:
     - text: |
-        PERSYARATAN PINDAH PRODI
-        1. Masih dalam masa periode pendaftaran SPMB dan perkuliahan semester ganjil belum dimulai.
-        2. Nilai ujian masuk SPMB Anda memenuhi syarat passing grade program studi baru yang dituju.
-        3. Daya tampung/kuota pada program studi baru masih tersedia.
+        TRANSFER MAJOR REQUIREMENTS
+        1. Still within the SPMB registration period and the odd semester lectures have not started.
+        2. Your SPMB entrance exam score meets the passing grade requirements of the target study program.
+        3. Quota/capacity in the new study program is still available.
+      translation:
+        id: |
+          PERSYARATAN PINDAH PRODI
+          1. Masih dalam masa periode pendaftaran SPMB dan perkuliahan semester ganjil belum dimulai.
+          2. Nilai ujian masuk SPMB Anda memenuhi syarat passing grade program studi baru yang dituju.
+          3. Daya tampung/kuota pada program studi baru masih tersedia.
 
   utter_answer_transaksi_pindah_prodi:
-    - text: "Silakan kirimkan formulir permohonan pindah program studi Anda untuk kami verifikasi."
+    - text: "Please submit your study program transfer application form for verification."
+      translation:
+        id: "Silakan kirimkan formulir permohonan pindah program studi Anda untuk kami verifikasi."
 
   utter_answer_hasil_pindah_prodi:
-    - text: "Permohonan perpindahan program studi Anda sedang diproses oleh tim panitia SPMB."
+    - text: "Your program transfer request is currently being processed by the SPMB committee."
+      translation:
+        id: "Permohonan perpindahan program studi Anda sedang diproses oleh tim panitia SPMB."
 
   utter_answer_error_pindah_prodi:
-    - text: "Maaf, terjadi kesalahan pada menu pindah prodi. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the transfer major menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu pindah prodi. Silakan coba lagi."

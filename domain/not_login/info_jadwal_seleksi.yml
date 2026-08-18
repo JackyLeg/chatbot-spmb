@@ -6,10 +6,19 @@ actions:
 responses:
   utter_info_jadwal_seleksi:
     - text: |
-        INFORMASI JADWAL SELEKSI SPMB UNIVERSITAS TRISAKTI
-        Seleksi Penerimaan Mahasiswa Baru diadakan dalam beberapa gelombang:
-        1. Gelombang I (Jalur Rapor/Tanpa Tes & Ujian Tulis): Agustus - Desember
-        2. Gelombang II (Ujian Tulis & Prestasi): Januari - April
-        3. Gelombang III (Ujian Tulis Khusus): Mei - Juli
+        UNIVERSITAS TRISAKTI SPMB SELECTION SCHEDULE INFORMATION
+        New Student Admission Selection is held in several waves:
+        1. Wave I (Report Card Path / Without Test & Written Exam): August - December
+        2. Wave II (Written Exam & Achievement Path): January - April
+        3. Wave III (Special Written Exam): May - July
         
-        *Jadwal ujian tulis dilaksanakan setiap hari Minggu di akhir bulan gelombang berjalan. Silakan kunjungi website spmb.trisakti.ac.id untuk rincian tanggal lengkap.*
+        *Written exams are conducted every Sunday at the end of the month of the running wave. Please visit the spmb.trisakti.ac.id website for complete date details.*
+      translation:
+        id: |
+          INFORMASI JADWAL SELEKSI SPMB UNIVERSITAS TRISAKTI
+          Seleksi Penerimaan Mahasiswa Baru diadakan dalam beberapa gelombang:
+          1. Gelombang I (Jalur Rapor/Tanpa Tes & Ujian Tulis): Agustus - Desember
+          2. Gelombang II (Ujian Tulis & Prestasi): Januari - April
+          3. Gelombang III (Ujian Tulis Khusus): Mei - Juli
+          
+          *Jadwal ujian tulis dilaksanakan setiap hari Minggu di akhir bulan gelombang berjalan. Silakan kunjungi website spmb.trisakti.ac.id untuk rincian tanggal lengkap.*

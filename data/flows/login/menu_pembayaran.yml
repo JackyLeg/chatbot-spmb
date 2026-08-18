@@ -1,14 +1,15 @@
 flows:
   pembayaran:
-    name: Pembayaran
-    description: Membantu pengguna dengan menu pembayaran / keuangan
+    name: Payment
+    description: Help user with payment / finance menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_pembayaran
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk pembayaran / keuangan.
-          Opsi yang tersedia: Prosedur Pembayaran, Persyaratan Pembayaran, Transaksi Pembayaran, dan Hasil Pembayaran.
+          User must select one of 4 options for payment / finance.
+          Options available: Payment Procedure, Payment Requirements, Payment Transaction, and Payment Status.
         next: menu_confirmation
 
       - id: menu_confirmation

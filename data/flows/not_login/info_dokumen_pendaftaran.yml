@@ -1,8 +1,9 @@
 flows:
   info_dokumen_pendaftaran:
     name: Info Kelengkapan Dokumen Pendaftaran
-    description: Menanyakan tentang kelengkapan dokumen pendaftaran untuk seleksi masuk
+    description: Ask about registration document requirements for admission
     steps:
+      - action: action_detect_language
       - action: action_info_dokumen_pendaftaran
         next:
           - if: slots.return_value == "Info Kelengkapan Dokumen Pendaftaran"

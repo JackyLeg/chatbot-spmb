@@ -1,14 +1,15 @@
 flows:
   hasil_seleksi:
-    name: Hasil Seleksi
-    description: Membantu pengguna dengan menu hasil seleksi
+    name: Selection Results
+    description: Help user with selection results menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_hasil_seleksi
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 3 opsi untuk hasil seleksi.
-          Opsi yang tersedia: Prosedur Hasil Seleksi, Persyaratan Hasil Seleksi, dan Hasil Hasil Seleksi.
+          User must select one of 3 options for selection results.
+          Options available: Selection Results Procedure, Selection Results Requirements, and Selection Results Status.
         next: menu_confirmation
 
       - id: menu_confirmation

@@ -43,17 +43,17 @@ class MenuDiskonAlumni(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Diskon Alumni":
+            case "Prosedur Diskon Alumni" | "Alumni Discount Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "diskon_alumni_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Diskon Alumni")]
-            case "Persyaratan Diskon Alumni":
+            case "Persyaratan Diskon Alumni" | "Alumni Discount Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "diskon_alumni_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Diskon Alumni")]
-            case "Transaksi Diskon Alumni":
+            case "Transaksi Diskon Alumni" | "Alumni Discount Transaction":
                 return [SlotSet("return_value", "Transaksi Diskon Alumni")]
-            case "Hasil Diskon Alumni":
+            case "Hasil Diskon Alumni" | "Alumni Discount Results":
                 if fetch_peraturan_api(tracker.sender_id, "diskon_alumni_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Diskon Alumni")]

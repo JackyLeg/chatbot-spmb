@@ -1,14 +1,15 @@
 flows:
   perjanjian:
-    name: Perjanjian
-    description: Membantu pengguna dengan menu perjanjian
+    name: Agreement
+    description: Help user with agreement menus
     steps:
+      - action: action_detect_language
       - id: ask_menu
         collect: menu_perjanjian
         ask_before_filling: true
         description: |
-          Pengguna harus memilih salah satu dari 4 opsi untuk perjanjian.
-          Opsi yang tersedia: Prosedur Perjanjian, Persyaratan Perjanjian, Transaksi Perjanjian, dan Hasil Perjanjian.
+          User must select one of 4 options for agreement.
+          Options available: Agreement Procedure, Agreement Requirements, Agreement Transaction, and Agreement Status.
         next: menu_confirmation
 
       - id: menu_confirmation

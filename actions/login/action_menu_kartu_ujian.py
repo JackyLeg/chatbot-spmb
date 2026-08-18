@@ -43,15 +43,15 @@ class MenuKartuUjian(Action):
             return False
 
         match pilihan_menu:
-            case "Prosedur Kartu Ujian":
+            case "Prosedur Kartu Ujian" | "Exam Card Procedure":
                 if fetch_peraturan_api(tracker.sender_id, "kartu_ujian_prosedur"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Prosedur Kartu Ujian")]
-            case "Persyaratan Kartu Ujian":
+            case "Persyaratan Kartu Ujian" | "Exam Card Requirements":
                 if fetch_peraturan_api(tracker.sender_id, "kartu_ujian_persyaratan"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Persyaratan Kartu Ujian")]
-            case "Hasil Kartu Ujian":
+            case "Hasil Kartu Ujian" | "Exam Card Status":
                 if fetch_peraturan_api(tracker.sender_id, "kartu_ujian_hasil"):
                     return [SlotSet("return_value", "api_success")]
                 return [SlotSet("return_value", "Hasil Kartu Ujian")]

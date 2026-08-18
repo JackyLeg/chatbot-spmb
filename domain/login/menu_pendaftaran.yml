@@ -11,6 +11,10 @@ slots:
       - Persyaratan Pendaftaran
       - Transaksi Pendaftaran
       - Hasil Pendaftaran
+      - Admission Procedure
+      - Admission Requirements
+      - Admission Transaction
+      - Admission Status
     mappings:
       - type: from_llm
 
@@ -21,54 +25,108 @@ slots:
 
 responses:
   utter_ask_menu_pendaftaran:
-    - text: "Silakan pilih salah satu opsi pendaftaran:"
+    - text: "Please select one of the admission options:"
+      translation:
+        id: "Silakan pilih salah satu opsi pendaftaran:"
       buttons:
-        - title: "Prosedur Pendaftaran"
-          payload: "Prosedur Pendaftaran"
-        - title: "Persyaratan Pendaftaran"
-          payload: "Persyaratan Pendaftaran"
-        - title: "Transaksi Pendaftaran"
-          payload: "Transaksi Pendaftaran"
-        - title: "Hasil Pendaftaran"
-          payload: "Hasil Pendaftaran"
+        - title: "Admission Procedure"
+          payload: "Admission Procedure"
+          translation:
+            id:
+              title: "Prosedur Pendaftaran"
+              payload: "Prosedur Pendaftaran"
+        - title: "Admission Requirements"
+          payload: "Admission Requirements"
+          translation:
+            id:
+              title: "Persyaratan Pendaftaran"
+              payload: "Persyaratan Pendaftaran"
+        - title: "Admission Transaction"
+          payload: "Admission Transaction"
+          translation:
+            id:
+              title: "Transaksi Pendaftaran"
+              payload: "Transaksi Pendaftaran"
+        - title: "Admission Status"
+          payload: "Admission Status"
+          translation:
+            id:
+              title: "Hasil Pendaftaran"
+              payload: "Hasil Pendaftaran"
 
   utter_ask_menu_pendaftaran_confirmation:
-    - text: "Anda memilih opsi: {menu_pendaftaran}. Apakah ini benar?"
+    - text: "You chose option: {menu_pendaftaran}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_pendaftaran}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_pendaftaran_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi pendaftaran."
+    - text: "Selection cancelled. Please select an admission option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi pendaftaran."
 
   utter_menu_pendaftaran_ok:
-    - text: "Anda telah memilih opsi pendaftaran: {menu_pendaftaran}."
+    - text: "You have selected the admission option: {menu_pendaftaran}."
+      translation:
+        id: "Anda telah memilih opsi pendaftaran: {menu_pendaftaran}."
 
   utter_answer_prosedur_pendaftaran:
     - text: |
-        PROSEDUR PENDAFTARAN SPMB UNIVERSITAS TRISAKTI
-        1. Buka portal pendaftaran online SPMB Trisakti.
-        2. Buat akun pendaftaran baru menggunakan email aktif.
-        3. Isi formulir data diri, data sekolah asal, dan unggah berkas yang diperlukan.
-        4. Lakukan pembayaran biaya pendaftaran untuk mendapatkan nomor seleksi.
-        5. Pilih program studi yang diinginkan.
+        UNIVERSITAS TRISAKTI SPMB ADMISSION PROCEDURE
+        1. Open the SPMB Trisakti online admission portal.
+        2. Create a new admission account using an active email.
+        3. Fill out the personal data and school history forms, and upload required documents.
+        4. Make the registration fee payment to obtain your selection number.
+        5. Select the desired study programs.
+      translation:
+        id: |
+          PROSEDUR PENDAFTARAN SPMB UNIVERSITAS TRISAKTI
+          1. Buka portal pendaftaran online SPMB Trisakti.
+          2. Buat akun pendaftaran baru menggunakan email aktif.
+          3. Isi formulir data diri, data sekolah asal, dan unggah berkas yang diperlukan.
+          4. Lakukan pembayaran biaya pendaftaran untuk mendapatkan nomor seleksi.
+          5. Pilih program studi yang diinginkan.
 
   utter_answer_persyaratan_pendaftaran:
     - text: |
-        PERSYARATAN PENDAFTARAN SPMB
-        1. Memiliki ijazah SMA/SMK/MA/sederajat yang telah dilegalisir.
-        2. Surat Keterangan Lulus (jika ijazah belum terbit).
-        3. Pas foto terbaru ukuran 3x4 dan 4x6 latar belakang merah.
-        4. Kartu Keluarga (KK) dan KTP/Kartu Pelajar.
-        5. Nilai rapor semester 1-5 (khusus jalur prestasi/tanpa tes).
+        ADMISSION REQUIREMENTS
+        1. Have a legalized SMA/SMK/MA/equivalent high school diploma.
+        2. Graduation Certificate (SKL) if the official diploma has not been issued.
+        3. Latest color photograph (3x4 and 4x6 sizes, red background).
+        4. Family Card (KK) and ID Card (KTP) / Student Card.
+        5. Report card grades from semesters 1 to 5 (specifically for the report card/academic path without test).
+      translation:
+        id: |
+          PERSYARATAN PENDAFTARAN SPMB
+          1. Memiliki ijazah SMA/SMK/MA/sederajat yang telah dilegalisir.
+          2. Surat Keterangan Lulus (jika ijazah belum terbit).
+          3. Pas foto terbaru ukuran 3x4 dan 4x6 latar belakang merah.
+          4. Kartu Keluarga (KK) dan KTP/Kartu Pelajar.
+          5. Nilai rapor semester 1-5 (khusus jalur prestasi/tanpa tes).
 
   utter_answer_transaksi_pendaftaran:
-    - text: "Silakan selesaikan pengisian formulir pendaftaran dan kirimkan berkas pendaftaran Anda."
+    - text: "Please complete your admission form entries and submit your registration documents."
+      translation:
+        id: "Silakan selesaikan pengisian formulir pendaftaran dan kirimkan berkas pendaftaran Anda."
 
   utter_answer_hasil_pendaftaran:
-    - text: "Status verifikasi berkas pendaftaran Anda sedang diproses oleh tim SPMB."
+    - text: "The verification status of your registration documents is currently being processed by the SPMB team."
+      translation:
+        id: "Status verifikasi berkas pendaftaran Anda sedang diproses oleh tim SPMB."
 
   utter_answer_error_pendaftaran:
-    - text: "Maaf, terjadi kesalahan pada menu pendaftaran. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the admission menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu pendaftaran. Silakan coba lagi."

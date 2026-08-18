@@ -1,22 +1,24 @@
 flows:
   greetings:
-    description: menyapa pengguna saat mereka memulai percakapan
+    description: greet users when they start a conversation
     persisted_slots:
       - name
     steps:
+      - action: action_detect_language
       - collect: name
-        description: nama pengguna
+        description: name of the user
       - action: utter_greet
 
   provide_capabilities:
     description: |
-      menjelaskan apa saja fitur yang tersedia untuk pengguna seleksi penerimaan mahasiswa baru (SPMB),
-      user mungkin bertanya "apa yang bisa kamu lakukan?" atau "fitur apa saja?"
+      explain what features are available for new student admission (SPMB) users,
+      user may ask "what can you do?" or "what features are available?" or "apa yang bisa kamu lakukan?"
     steps:
       - action: utter_provide_info
 
   provide_introduction:
     description: |
-      memperkenalkan asisten dan tujuannya untuk seleksi penerimaan mahasiswa baru (SPMB)
+      introduce the assistant and its purpose for new student admission (SPMB)
+      user may ask "who are you?" or "siapa kamu?"
     steps:
       - action: utter_imabot

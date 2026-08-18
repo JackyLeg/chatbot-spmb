@@ -11,6 +11,10 @@ slots:
       - Persyaratan Perjanjian
       - Transaksi Perjanjian
       - Hasil Perjanjian
+      - Agreement Procedure
+      - Agreement Requirements
+      - Agreement Transaction
+      - Agreement Status
     mappings:
       - type: from_llm
 
@@ -21,53 +25,106 @@ slots:
 
 responses:
   utter_ask_menu_perjanjian:
-    - text: "Silakan pilih salah satu opsi perjanjian:"
+    - text: "Please select one of the agreement options:"
+      translation:
+        id: "Silakan pilih salah satu opsi perjanjian:"
       buttons:
-        - title: "Prosedur Perjanjian"
-          payload: "Prosedur Perjanjian"
-        - title: "Persyaratan Perjanjian"
-          payload: "Persyaratan Perjanjian"
-        - title: "Transaksi Perjanjian"
-          payload: "Transaksi Perjanjian"
-        - title: "Hasil Perjanjian"
-          payload: "Hasil Perjanjian"
+        - title: "Agreement Procedure"
+          payload: "Agreement Procedure"
+          translation:
+            id:
+              title: "Prosedur Perjanjian"
+              payload: "Prosedur Perjanjian"
+        - title: "Agreement Requirements"
+          payload: "Agreement Requirements"
+          translation:
+            id:
+              title: "Persyaratan Perjanjian"
+              payload: "Persyaratan Perjanjian"
+        - title: "Agreement Transaction"
+          payload: "Agreement Transaction"
+          translation:
+            id:
+              title: "Transaksi Perjanjian"
+              payload: "Transaksi Perjanjian"
+        - title: "Agreement Status"
+          payload: "Agreement Status"
+          translation:
+            id:
+              title: "Hasil Perjanjian"
+              payload: "Hasil Perjanjian"
 
   utter_ask_menu_perjanjian_confirmation:
-    - text: "Anda memilih opsi: {menu_perjanjian}. Apakah ini benar?"
+    - text: "You chose option: {menu_perjanjian}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_perjanjian}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_perjanjian_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi perjanjian."
+    - text: "Selection cancelled. Please select an agreement option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi perjanjian."
 
   utter_menu_perjanjian_ok:
-    - text: "Anda telah memilih opsi perjanjian: {menu_perjanjian}."
+    - text: "You have selected the agreement option: {menu_perjanjian}."
+      translation:
+        id: "Anda telah memilih opsi perjanjian: {menu_perjanjian}."
 
   utter_answer_prosedur_perjanjian:
     - text: |
-        PROSEDUR PENANDATANGANAN PERJANJIAN MAHASISWA BARU
-        1. Login ke portal SPMB Trisakti.
-        2. Unduh draf Surat Perjanjian Mahasiswa Baru dari dashboard Anda.
-        3. Baca dan pahami hak serta kewajiban sebagai calon mahasiswa baru Universitas Trisakti.
-        4. Tanda tangani dokumen di atas meterai Rp10.000 bersama dengan Orang Tua/Wali.
-        5. Unggah kembali berkas scan surat perjanjian yang telah ditandatangani.
+        NEW STUDENT AGREEMENT SIGNING PROCEDURE
+        1. Log in to the SPMB Trisakti portal.
+        2. Download the New Student Agreement Letter draft from your dashboard.
+        3. Read and understand your rights and obligations as a prospective new student of Universitas Trisakti.
+        4. Sign the document on a Rp10,000 physical stamp duty (meterai) along with your Parent/Guardian.
+        5. Re-upload the scanned file of the signed agreement letter.
+      translation:
+        id: |
+          PROSEDUR PENANDATANGANAN PERJANJIAN MAHASISWA BARU
+          1. Login ke portal SPMB Trisakti.
+          2. Unduh draf Surat Perjanjian Mahasiswa Baru dari dashboard Anda.
+          3. Baca dan pahami hak serta kewajiban sebagai calon mahasiswa baru Universitas Trisakti.
+          4. Tanda tangani dokumen di atas meterai Rp10.000 bersama dengan Orang Tua/Wali.
+          5. Unggah kembali berkas scan surat perjanjian yang telah ditandatangani.
 
   utter_answer_persyaratan_perjanjian:
     - text: |
-        PERSYARATAN DOKUMEN PERJANJIAN
-        1. Telah dinyatakan lulus seleksi masuk Universitas Trisakti.
-        2. Surat Perjanjian Mahasiswa Baru asli yang dicetak dari portal.
-        3. Meterai Rp10.000 (1 buah).
-        4. Tanda tangan basah mahasiswa dan orang tua/wali mahasiswa.
+        AGREEMENT DOCUMENT REQUIREMENTS
+        1. Officially declared passed the Universitas Trisakti entrance selection.
+        2. Original New Student Agreement Letter printed from the portal.
+        3. One Rp10,000 stamp duty (meterai).
+        4. Physical signatures of the student and parent/guardian.
+      translation:
+        id: |
+          PERSYARATAN DOKUMEN PERJANJIAN
+          1. Telah dinyatakan lulus seleksi masuk Universitas Trisakti.
+          2. Surat Perjanjian Mahasiswa Baru asli yang dicetak dari portal.
+          3. Meterai Rp10.000 (1 buah).
+          4. Tanda tangan basah mahasiswa dan orang tua/wali mahasiswa.
 
   utter_answer_transaksi_perjanjian:
-    - text: "Silakan unggah dokumen perjanjian mahasiswa baru yang telah ditandatangani di atas meterai."
+    - text: "Please upload the signed new student agreement document on the stamp duty."
+      translation:
+        id: "Silakan unggah dokumen perjanjian mahasiswa baru yang telah ditandatangani di atas meterai."
 
   utter_answer_hasil_perjanjian:
-    - text: "Dokumen perjanjian Anda telah diunggah dan sedang dalam tahap verifikasi admin."
+    - text: "Your agreement document has been uploaded and is currently under admin verification."
+      translation:
+        id: "Dokumen perjanjian Anda telah diunggah dan sedang dalam tahap verifikasi admin."
 
   utter_answer_error_perjanjian:
-    - text: "Maaf, terjadi kesalahan pada menu perjanjian. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the agreement menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu perjanjian. Silakan coba lagi."

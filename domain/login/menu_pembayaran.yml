@@ -11,6 +11,10 @@ slots:
       - Persyaratan Pembayaran
       - Transaksi Pembayaran
       - Hasil Pembayaran
+      - Payment Procedure
+      - Payment Requirements
+      - Payment Transaction
+      - Payment Status
     mappings:
       - type: from_llm
 
@@ -21,50 +25,100 @@ slots:
 
 responses:
   utter_ask_menu_pembayaran:
-    - text: "Silakan pilih salah satu opsi pembayaran / keuangan:"
+    - text: "Please select one of the payment / finance options:"
+      translation:
+        id: "Silakan pilih salah satu opsi pembayaran / keuangan:"
       buttons:
-        - title: "Prosedur Pembayaran"
-          payload: "Prosedur Pembayaran"
-        - title: "Persyaratan Pembayaran"
-          payload: "Persyaratan Pembayaran"
-        - title: "Transaksi Pembayaran"
-          payload: "Transaksi Pembayaran"
-        - title: "Hasil Pembayaran"
-          payload: "Hasil Pembayaran"
+        - title: "Payment Procedure"
+          payload: "Payment Procedure"
+          translation:
+            id:
+              title: "Prosedur Pembayaran"
+              payload: "Prosedur Pembayaran"
+        - title: "Payment Requirements"
+          payload: "Payment Requirements"
+          translation:
+            id:
+              title: "Persyaratan Pembayaran"
+              payload: "Persyaratan Pembayaran"
+        - title: "Payment Transaction"
+          payload: "Payment Transaction"
+          translation:
+            id:
+              title: "Transaksi Pembayaran"
+              payload: "Transaksi Pembayaran"
+        - title: "Payment Status"
+          payload: "Payment Status"
+          translation:
+            id:
+              title: "Hasil Pembayaran"
+              payload: "Hasil Pembayaran"
 
   utter_ask_menu_pembayaran_confirmation:
-    - text: "Anda memilih opsi: {menu_pembayaran}. Apakah ini benar?"
+    - text: "You chose option: {menu_pembayaran}. Is this correct?"
+      translation:
+        id: "Anda memilih opsi: {menu_pembayaran}. Apakah ini benar?"
       buttons:
-        - title: "Ya"
-          payload: "Ya"
-        - title: "Tidak"
-          payload: "Tidak"
+        - title: "Yes"
+          payload: "Yes"
+          translation:
+            id:
+              title: "Ya"
+              payload: "Ya"
+        - title: "No"
+          payload: "No"
+          translation:
+            id:
+              title: "Tidak"
+              payload: "Tidak"
 
   utter_menu_pembayaran_cancelled:
-    - text: "Pilihan dibatalkan. Silakan pilih kembali opsi pembayaran."
+    - text: "Selection cancelled. Please select a payment option again."
+      translation:
+        id: "Pilihan dibatalkan. Silakan pilih kembali opsi pembayaran."
 
   utter_menu_pembayaran_ok:
-    - text: "Anda telah memilih opsi pembayaran: {menu_pembayaran}."
+    - text: "You have selected the payment option: {menu_pembayaran}."
+      translation:
+        id: "Anda telah memilih opsi pembayaran: {menu_pembayaran}."
 
   utter_answer_prosedur_pembayaran:
     - text: |
-        PROSEDUR PEMBAYARAN BIAYA PENDIDIKAN / REGISTRASI
-        1. Login ke portal SPMB Trisakti untuk melihat rincian biaya registrasi ulang dan nomor Virtual Account (VA) Anda.
-        2. Pembayaran dapat dilakukan melalui transfer bank (ATM, m-Banking, atau teller) menggunakan nomor VA tersebut.
-        3. Konfirmasi pembayaran akan terjadi secara otomatis di sistem portal dalam waktu maksimal 1x24 jam setelah pembayaran sukses dilakukan.
+        TUITION FEE / REGISTRATION PAYMENT PROCEDURE
+        1. Log in to the SPMB Trisakti portal to view your re-registration fee details and Virtual Account (VA) number.
+        2. Payment can be made via bank transfer (ATM, m-Banking, or teller) using the VA number.
+        3. Payment confirmation will occur automatically in the portal system within a maximum of 1x24 hours after successful payment.
+      translation:
+        id: |
+          PROSEDUR PEMBAYARAN BIAYA PENDIDIKAN / REGISTRASI
+          1. Login ke portal SPMB Trisakti untuk melihat rincian biaya registrasi ulang dan nomor Virtual Account (VA) Anda.
+          2. Pembayaran dapat dilakukan melalui transfer bank (ATM, m-Banking, atau teller) menggunakan nomor VA tersebut.
+          3. Konfirmasi pembayaran akan terjadi secara otomatis di sistem portal dalam waktu maksimal 1x24 jam setelah pembayaran sukses dilakukan.
 
   utter_answer_persyaratan_pembayaran:
     - text: |
-        PERSYARATAN PEMBAYARAN BIAYA KULIAH
-        1. Memiliki nomor Virtual Account resmi dari Universitas Trisakti.
-        2. Melakukan pembayaran sejumlah tagihan yang tertera pada rincian skema keuangan Anda (tidak kurang dan tidak lebih).
-        3. Simpan struk/bukti transfer pembayaran sebagai arsip pribadi.
+        TUITION FEE PAYMENT REQUIREMENTS
+        1. Have an official Virtual Account number from Universitas Trisakti.
+        2. Make payment for the exact amount shown on your financial scheme details (neither more nor less).
+        3. Save the transfer receipt/proof of payment as a personal archive.
+      translation:
+        id: |
+          PERSYARATAN PEMBAYARAN BIAYA KULIAH
+          1. Memiliki nomor Virtual Account resmi dari Universitas Trisakti.
+          2. Melakukan pembayaran sejumlah tagihan yang tertera pada rincian skema keuangan Anda (tidak kurang dan tidak lebih).
+          3. Simpan struk/bukti transfer pembayaran sebagai arsip pribadi.
 
   utter_answer_transaksi_pembayaran:
-    - text: "Silakan lakukan pembayaran biaya pendidikan Anda melalui Virtual Account yang tertera di portal."
+    - text: "Please make your tuition fee payment via the Virtual Account listed in the portal."
+      translation:
+        id: "Silakan lakukan pembayaran biaya pendidikan Anda melalui Virtual Account yang tertera di portal."
 
   utter_answer_hasil_pembayaran:
-    - text: "Pembayaran Anda telah diterima dan diverifikasi oleh sistem keuangan Universitas Trisakti."
+    - text: "Your payment has been received and verified by the Universitas Trisakti financial system."
+      translation:
+        id: "Pembayaran Anda telah diterima dan diverifikasi oleh sistem keuangan Universitas Trisakti."
 
   utter_answer_error_pembayaran:
-    - text: "Maaf, terjadi kesalahan pada menu pembayaran. Silakan coba lagi."
+    - text: "Sorry, an error occurred in the payment menu. Please try again."
+      translation:
+        id: "Maaf, terjadi kesalahan pada menu pembayaran. Silakan coba lagi."
