@@ -84,31 +84,45 @@ responses:
 
   utter_answer_prosedur_undur_diri:
     - text: |
-        PROSPECTIVE NEW STUDENT WITHDRAWAL PROCEDURE
-        1. Calon student submits a formal, written withdrawal request to the SPMB committee.
-        2. Fill out the withdrawal application form available in the SPMB portal.
-        3. Upload the stamp duty (meterai) signed request letter, receipt of payment, and copy of ID card (KTP/KK).
-        4. The tuition fee refund process (subject to prevailing refund terms) requires a maximum of 14 working days of verification.
+        NEW STUDENT WITHDRAWAL PROCEDURE
+        1. Log in to the SPMB Trisakti portal.
+        2. Select the "Status Keuangan" menu and press the "Payment" tab to check payments made.
+        3. Select the "Undur Diri" menu.
+        4. Select the study program to withdraw from, then click the "Apply Quit" button.
+        5. Fill in the refund bank account details, complete the withdrawal application form, and upload all required documents.
+        6. Once approved, download "Bukti Pengajuan Undur Diri". The refund will be transferred after verification by BAK.
       translation:
         id: |
           PROSEDUR UNDUR DIRI CALON MAHASISWA BARU
-          1. Calon mahasiswa mengajukan permohonan undur diri resmi secara tertulis ke panitia SPMB.
-          2. Isi formulir pengajuan undur diri yang tersedia di portal SPMB.
-          3. Unggah surat permohonan bermeterai, bukti tanda terima pembayaran, dan fotokopi KTP/KK.
-          4. Proses pengembalian biaya pendidikan (sesuai ketentuan pengembalian yang berlaku) membutuhkan waktu verifikasi maksimal 14 hari kerja.
+          1. Login ke portal SPMB Trisakti.
+          2. Masuk ke menu "Status Keuangan" dan tekan tab "Payment" untuk memeriksa jumlah pembayaran yang telah dilakukan.
+          3. Pilih menu "Undur Diri".
+          4. Pilih program studi yang akan diundurdirikan, lalu tekan tombol "Apply Quit".
+          5. Isi data rekening pengembalian dana, lengkapi formulir aplikasi undur diri, dan unggah semua dokumen yang diminta.
+          6. Setelah disetujui, calon mahasiswa dapat mengunduh "Bukti Pengajuan Undur Diri". Dana pengembalian ditransfer setelah diverifikasi oleh BAK.
 
   utter_answer_persyaratan_undur_diri:
     - text: |
         WITHDRAWAL REQUIREMENTS
-        1. A Withdrawal Application Letter signed by the student and parent on a Rp10,000 stamp duty (meterai).
-        2. Attach a letter of proof of acceptance at a State University (PTN) via SNBP/SNBT path (if withdrawing because of acceptance at a PTN).
-        3. Receipt or original proof of tuition payment made to Universitas Trisakti.
+        1. Withdrawal applications must be submitted online by the candidate or their parents no later than August 11, 2026.
+        2. Refund of education fees is subject to administrative deductions based on program/faculty:
+            - Bachelor of Medicine (FK): IDR 50,000,000
+            - Bachelor of Dentistry (FKG): IDR 25,000,000
+            - Master and Doctoral programs: IDR 15,000,000
+            - Other Bachelor programs (FH, FEB, FTSP, FTI, FTKE, FALTL, FSRD): IDR 10,000,000
+            - Diploma programs: IDR 1,000,000
+        3. Submissions outside the schedule or after August 11, 2026, are non-refundable for any reason.
       translation:
         id: |
           PERSYARATAN UNDUR DIRI
-          1. Surat Permohonan Undur Diri yang ditandatangani mahasiswa dan orang itu di atas meterai Rp10.000.
-          2. Melampirkan surat bukti kelulusan di Perguruan Tinggi Negeri (PTN) jalur SNBP/SNBT (jika mengundurkan diri karena diterima di PTN).
-          3. Kwitansi atau bukti pembayaran biaya kuliah asli yang telah dilakukan ke Universitas Trisakti.
+          1. Pengajuan undur diri dilakukan secara daring (online) oleh calon mahasiswa bersangkutan atau orang tua/wali paling lambat tanggal 11 Agustus 2026.
+          2. Pengembalian biaya pendidikan dikenai potongan biaya administrasi sesuai jenjang program/fakultas:
+              - Sarjana Kedokteran (FK): Rp50.000.000
+              - Sarjana Kedokteran Gigi (FKG): Rp25.000.000
+              - Program Magister & Doktor: Rp15.000.000
+              - Program Sarjana lainnya (FH, FEB, FTSP, FTI, FTKE, FALTL, FSRD): Rp10.000.000
+              - Program Diploma: Rp1.000.000
+          3. Pengajuan di luar jadwal dan melebihi batas waktu (setelah 11 Agustus 2026) menyebabkan seluruh biaya pendidikan yang telah dibayarkan tidak dikembalikan dengan alasan apapun.
 
   utter_answer_transaksi_undur_diri:
     - text: "Please complete the documents and form for your withdrawal application so we can process it."

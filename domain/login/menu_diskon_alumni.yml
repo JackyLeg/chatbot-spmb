@@ -86,35 +86,29 @@ responses:
 
   utter_answer_prosedur_diskon_alumni:
     - text: |
-        ALUMNI/ALUMNI FAMILY PATH TUITION DISCOUNT APPLICATION PROCEDURE
-        1. Log in to your SPMB Trisakti portal.
-        2. Select the tuition fee discount application menu (Alumni Discount).
-        3. Fill in the family relationship data with Universitas Trisakti alumni.
-        4. Upload alumni proof documents (Diploma/Alumni Card/Family Card).
-        5. The financial administration team will verify the validity of the data for tuition discount approval.
+        TUITION SPP DISCOUNT APPLICATION PROCEDURE (EARLY PAYMENT)
+        1. Complete your tuition fee payment as a lump sum (Package A) according to the invoice in your SPMB account.
+        2. The SPP discount will be calculated automatically by the financial system based on the payment date.
+        3. Pay before May 31, 2026, to receive a 10% SPP discount (FKG receives a 5% discount), or between June 1 and August 31, 2026, to receive a 5% discount (except FK & FKG).
       translation:
         id: |
-          PROSEDUR PENGAJUAN DISKON BIAYA KULIAH JALUR ALUMNI/KELUARGA ALUMNI
-          1. Login ke portal SPMB Trisakti Anda.
-          2. Pilih menu pengajuan potongan biaya pendidikan (Diskon Alumni).
-          3. Isi data hubungan kekeluargaan dengan alumni Universitas Trisakti.
-          4. Unggah dokumen bukti alumni (Ijazah/Kartu Alumni/KK).
-          5. Tim administrasi keuangan akan memverifikasi keabsahan data untuk persetujuan pemotongan biaya.
+          PROSEDUR DISKON/POTONGAN SPP (PEMBAYARAN AWAL)
+          1. Lakukan pembayaran biaya kuliah lunas sekaligus (Paket A) sesuai tagihan di akun SPMB.
+          2. Potongan SPP akan dihitung secara otomatis oleh sistem keuangan berdasarkan tanggal pembayaran.
+          3. Bayar sebelum 31 Mei 2026 untuk mendapat potongan SPP 10% (FKG potongan 5%), atau antara 1 Juni s.d. 31 Agustus 2026 untuk mendapat potongan 5% (kecuali FK & FKG).
 
   utter_answer_persyaratan_diskon_alumni:
     - text: |
-        ALUMNI DISCOUNT REQUIREMENTS
-        1. Applicant is a biological child or biological sibling of a Universitas Trisakti alumnus.
-        2. Photocopy of Universitas Trisakti Diploma belonging to the parent/biological sibling.
-        3. Original Family Card (KK) as proof of family relationship.
-        4. Trisakti Alumni Association Member Card (if any).
+        TUITION SPP DISCOUNT REQUIREMENTS
+        1. Choose Package A (100% full payment as lump sum).
+        2. Payment settled no later than May 31, 2026 (10% discount, 5% for FKG) or between June 1 and August 31, 2026 (5% discount, not applicable for FK & FKG).
+        3. Applicable for Bachelor (Sarjana) and Diploma programs.
       translation:
         id: |
-          PERSYARATAN DISKON ALUMNI
-          1. Pendaftar adalah anak kandung atau saudara kandung dari alumni Universitas Trisakti.
-          2. Fotokopi Ijazah Universitas Trisakti milik orang tua/saudara kandung yang bersangkutan.
-          3. Kartu Keluarga (KK) asli sebagai bukti hubungan kekeluargaan.
-          4. Kartu Anggota Ikatan Alumni Trisakti (jika ada).
+          PERSYARATAN DISKON/POTONGAN SPP
+          1. Memilih Paket A (pembayaran lunas sekaligus 100% sesuai periode diterima).
+          2. Pembayaran diselesaikan paling lambat tanggal 31 Mei 2026 (potongan 10%, FKG 5%) atau antara 1 Juni s.d. 31 Agustus 2026 (potongan 5%, tidak berlaku untuk FK & FKG).
+          3. Berlaku untuk program Sarjana dan Diploma.
 
   utter_answer_transaksi_diskon_alumni:
     - text: "Please submit your alumni family proof documents for discount verification."

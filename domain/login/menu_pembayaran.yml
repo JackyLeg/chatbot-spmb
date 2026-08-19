@@ -85,28 +85,38 @@ responses:
   utter_answer_prosedur_pembayaran:
     - text: |
         TUITION FEE / REGISTRATION PAYMENT PROCEDURE
-        1. Log in to the SPMB Trisakti portal to view your re-registration fee details and Virtual Account (VA) number.
-        2. Payment can be made via bank transfer (ATM, m-Banking, or teller) using the VA number.
-        3. Payment confirmation will occur automatically in the portal system within a maximum of 1x24 hours after successful payment.
+        1. Log in to the SPMB Trisakti portal to view your education fee details and BNI Virtual Account (VA) number under the "Status Keuangan" menu, "Payment" tab.
+        2. Pay the tuition fees by transferring to the designated Bank BNI VA number.
+        3. Prospective students can choose a payment package: Package A (100% full payment) or Package B (3 or 4 installments in accordance with Rector's Regulation No. 32/2025).
+        4. All components of tuition fees must be fully settled before participating in the Odd Semester Final Exam (UAS).
       translation:
         id: |
           PROSEDUR PEMBAYARAN BIAYA PENDIDIKAN / REGISTRASI
-          1. Login ke portal SPMB Trisakti untuk melihat rincian biaya registrasi ulang dan nomor Virtual Account (VA) Anda.
-          2. Pembayaran dapat dilakukan melalui transfer bank (ATM, m-Banking, atau teller) menggunakan nomor VA tersebut.
-          3. Konfirmasi pembayaran akan terjadi secara otomatis di sistem portal dalam waktu maksimal 1x24 jam setelah pembayaran sukses dilakukan.
+          1. Login ke portal SPMB Trisakti untuk melihat rincian biaya pendidikan dan nomor Virtual Account (VA) Bank BNI pada menu "Status Keuangan" tab "Payment".
+          2. Pembayaran biaya pendidikan dilakukan melalui transfer bank ke VA Bank BNI yang tertera.
+          3. Calon mahasiswa dapat memilih salah satu paket pembayaran: Paket A (pembayaran lunas sekaligus 100%) atau Paket B (diangsur 3 atau 4 kali sesuai Peraturan Rektor No. 32 Tahun 2025).
+          4. Pelunasan seluruh komponen biaya pendidikan harus diselesaikan sebelum mengikuti Ujian Akhir Semester (UAS) Semester Gasal.
 
   utter_answer_persyaratan_pembayaran:
     - text: |
         TUITION FEE PAYMENT REQUIREMENTS
-        1. Have an official Virtual Account number from Universitas Trisakti.
-        2. Make payment for the exact amount shown on your financial scheme details (neither more nor less).
-        3. Save the transfer receipt/proof of payment as a personal archive.
+        1. Have an official BNI Virtual Account number generated in your SPMB account.
+        2. Make payment for the exact amount shown on your financial details.
+        3. Pay the Student Health Service (LKM) fee of IDR 60,000 per semester.
+        4. For foreign citizens (WNA), the tuition fee is 1 to 1.5 times the fee for Indonesian citizens (WNI).
+        5. SPP Discount (Early Payment):
+            - 10% SPP discount if choosing Package A and paid by May 31, 2026 (FKG discount is 5%).
+            - 5% SPP discount if paid between June 1 and August 31, 2026 (except FK and FKG).
       translation:
         id: |
           PERSYARATAN PEMBAYARAN BIAYA KULIAH
-          1. Memiliki nomor Virtual Account resmi dari Universitas Trisakti.
-          2. Melakukan pembayaran sejumlah tagihan yang tertera pada rincian skema keuangan Anda (tidak kurang dan tidak lebih).
-          3. Simpan struk/bukti transfer pembayaran sebagai arsip pribadi.
+          1. Memiliki nomor BNI Virtual Account resmi yang terbit di akun SPMB masing-masing.
+          2. Membayar sesuai tagihan yang tertera pada skema keuangan.
+          3. Membayar Biaya Layanan Kesehatan Mahasiswa (LKM) sebesar Rp60.000 per semester.
+          4. Bagi WNA, biaya pendidikan dikenakan tarif 1 s.d. 1,5 kali biaya pendidikan WNI.
+          5. Diskon/Potongan SPP (Pembayaran Awal):
+              - Potongan SPP 10% jika memilih Paket A dan membayar paling lambat 31 Mei 2026 (potongan SPP FKG adalah 5%).
+              - Potongan SPP 5% jika membayar dari tanggal 1 Juni s.d. 31 Agustus 2026 (kecuali FK dan FKG).
 
   utter_answer_transaksi_pembayaran:
     - text: "Please make your tuition fee payment via the Virtual Account listed in the portal."

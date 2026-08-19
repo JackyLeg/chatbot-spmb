@@ -78,29 +78,29 @@ responses:
     - text: |
         EXAM CARD PRINTING PROCEDURE
         1. Log in to your SPMB Trisakti portal account.
-        2. Go to the applicant dashboard page.
-        3. Click the "Print Exam Card" menu after the registration payment status is verified.
-        4. Save the PDF file or print a physical exam card to bring on the day of the exam.
+        2. Access the applicant dashboard page once your registration payment status is verified.
+        3. Download the exam participant card from the SPMB account dashboard to check the exam schedule and rules.
+        4. Participate in the online Entrance Examination (USM) via the SPMB portal on the chosen date.
       translation:
         id: |
           PROSEDUR CETAK KARTU PESERTA UJIAN
           1. Login ke akun portal SPMB Trisakti Anda.
-          2. Masuk ke halaman dashboard peserta.
-          3. Klik menu "Cetak Kartu Ujian" setelah status pembayaran pendaftaran terverifikasi.
-          4. Simpan berkas PDF atau cetak fisik kartu ujian untuk dibawa saat hari pelaksanaan ujian.
+          2. Masuk ke halaman dashboard peserta setelah status pembayaran pendaftaran terverifikasi.
+          3. Calon mahasiswa mengunduh kartu peserta ujian dari dashboard akun SPMB untuk melihat jadwal dan ketentuan tes.
+          4. Mengikuti Ujian Saringan Masuk (USM) secara daring (online) melalui portal SPMB sesuai tanggal yang dipilih.
 
   utter_answer_persyaratan_kartu_ujian:
     - text: |
         EXAM CARD REQUIREMENTS
-        1. Registration form payment status is paid in full and verified in the financial system.
-        2. All required profile data on the registration form has been completely filled.
-        3. Official participant photo document has been successfully uploaded.
+        1. The registration/selection fee payment status is paid and verified in the financial system.
+        2. Personal details and required registration forms have been completely filled and confirmed.
+        3. Applicants for FK & FKG must undergo additional tests (IST, Psychotest, Biology & Chemistry) organized by the Psychology Bureau/committee.
       translation:
         id: |
           PERSYARATAN KARTU UJIAN
-          1. Status pembayaran formulir pendaftaran telah lunas dan terverifikasi di sistem keuangan.
-          2. Seluruh data biodata wajib pada formulir pendaftaran telah diisi dengan lengkap.
-          3. Dokumen foto peserta berformat resmi telah berhasil diunggah.
+          1. Status pembayaran biaya seleksi/pendaftaran telah lunas dan terverifikasi di sistem keuangan.
+          2. Pengisian data personal dan berkas pendaftaran telah lengkap dan terkonfirmasi.
+          3. Khusus peminat FK & FKG wajib mengikuti tes tambahan (IST, Psikotes, Biologi & Kimia) yang diselenggarakan oleh Biro Psikologi/panitia.
 
   utter_answer_hasil_kartu_ujian:
     - text: "Your Exam Card has been issued. Please download it via your SPMB account dashboard."

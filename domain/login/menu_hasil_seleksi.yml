@@ -77,30 +77,30 @@ responses:
   utter_answer_prosedur_hasil_seleksi:
     - text: |
         PROCEDURE FOR VIEWING SELECTION RESULTS ANNOUNCEMENT
-        1. The selection results announcement is published according to the scheduled date for each wave.
-        2. Open the Universitas Trisakti SPMB announcement portal.
-        3. Enter your registration number or account email.
-        4. The system will display your graduation status on the chosen study program.
+        1. Selection results announcement will be published according to the scheduled intake wave.
+        2. Log in to the SPMB Trisakti portal on the designated announcement day.
+        3. View your graduation status on your dashboard menu.
       translation:
         id: |
           PROSEDUR MELIHAT PENGUMUMAN HASIL SELEKSI
-          1. Pengumuman hasil seleksi dipublikasikan sesuai dengan tanggal yang telah dijadwalkan pada masing-masing gelombang.
-          2. Buka portal pengumuman SPMB Universitas Trisakti.
-          3. Masukkan nomor pendaftaran atau email akun Anda.
-          4. Sistem akan menampilkan keputusan kelulusan Anda pada prodi pilihan.
+          1. Pengumuman hasil seleksi dipublikasikan sesuai jadwal gelombang yang diikuti.
+          2. Login ke portal SPMB Trisakti pada hari pengumuman yang ditentukan.
+          3. Lihat status kelulusan Anda pada menu dashboard masing-masing.
 
   utter_answer_persyaratan_hasil_seleksi:
     - text: |
         SELECTION RESULTS ANNOUNCEMENT REQUIREMENTS
-        1. The entrance selection exam has been completed (for the written exam/skills test path).
-        2. Verification results of report cards and achievement documents have been finalized (for the achievement path).
-        3. Selection test scores have been verified by the SPMB committee.
+        1. Regular USM selection results for Non-FK/FKG are announced on the Monday following the exam.
+        2. USM selection results for FK/FKG are announced on the scheduled Monday (approx. 8-9 days after the exam).
+        3. Selection results for Report Card/PSSB, Portfolio, and UTBK paths (Non-FK/FKG) are announced periodically every Monday (or Mon, Wed, Fri during peak periods).
+        4. Have completed all entrance examinations or achievement document verifications.
       translation:
         id: |
           PERSYARATAN PENGUMUMAN HASIL SELEKSI
-          1. Ujian seleksi masuk telah selesai dilaksanakan (bagi jalur ujian tertulis/ujian keterampilan).
-          2. Hasil verifikasi rapor dan berkas prestasi telah dirampungkan (bagi jalur prestasi).
-          3. Nilai tes seleksi telah diverifikasi oleh panitia SPMB.
+          1. Pengumuman hasil seleksi USM reguler Non-FK/FKG diumumkan pada hari Senin setelah pelaksanaan ujian (sesuai periode).
+          2. Pengumuman hasil seleksi USM FK/FKG diumumkan pada hari Senin terjadwal (sekitar 8-9 hari setelah ujian).
+          3. Hasil seleksi jalur Rapor/PSSB, Portofolio, dan UTBK Non-FK/FKG diumumkan secara berkala setiap hari Senin (atau Senin, Rabu, Jumat pada periode tertentu).
+          4. Telah menyelesaikan seluruh rangkaian tes seleksi masuk atau verifikasi berkas prestasi.
 
   utter_answer_hasil_hasil_seleksi:
     - text: "Your registration selection results have been published. Please check your graduation status on the SPMB portal."

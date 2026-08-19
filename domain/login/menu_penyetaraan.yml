@@ -77,34 +77,36 @@ responses:
   utter_answer_prosedur_penyetaraan:
     - text: |
         COURSE / GRADE EQUIVALENCY PROCEDURE (FOR TRANSFER/EXTENSION PATH)
-        1. Log in to your SPMB Trisakti portal.
-        2. Select the course equivalency application menu.
-        3. Enter your previous university data and upload your official academic transcript obtained earlier.
-        4. The destination study program will assess and determine the conversion of recognized courses.
-        5. The course equivalency result will be issued as a Course Equivalency Certificate.
+        1. Register online at https://spmb.trisakti.ac.id/ under the Transfer (Pindahan) or RPL Transfer Credit (RPL-TK) pathway.
+        2. Pay the selection/equivalence fee of IDR 750,000 to the BNI Virtual Account.
+        3. Fill out the transfer application form and upload the official transcript, syllabus, origin program accreditation, and PDDikti active status proof.
+        4. RPL assessors and the target study program verify and determine the recognized courses.
+        5. The conversion results are issued, and the remaining study period is calculated using the official formula.
       translation:
         id: |
           PROSEDUR PENYETARAAN MATA KULIAH / NILAI (BAGI PINDAHAN/LANJUT JENIS)
-          1. Login ke portal SPMB Trisakti Anda.
-          2. Pilih menu pengajuan penyetaraan mata kuliah.
-          3. Isi data asal universitas dan unggah transkrip nilai resmi yang diperoleh sebelumnya.
-          4. Program studi tujuan akan melakukan penilaian konversi mata kuliah yang diakui.
-          5. Hasil penyetaraan nilai konversi akan diterbitkan dalam bentuk Surat Keterangan Penyetaraan.
+          1. Daftar online di https://spmb.trisakti.ac.id/ pada jalur Pindahan atau RPL Transfer Kredit (RPL-TK).
+          2. Bayar biaya seleksi/penyetaraan sebesar Rp750.000 ke Virtual Account Bank BNI.
+          3. Isi permohonan transfer mata kuliah, nilai, dan unggah dokumen persyaratan akademik/administrasi di portal.
+          4. Tim Asesor RPL / Program Studi tujuan melakukan verifikasi dan penyetaraan konversi mata kuliah yang diakui.
+          5. Hasil konversi diterbitkan dan sisa masa studi dihitung menggunakan rumus sisa studi resmi.
 
   utter_answer_persyaratan_penyetaraan:
     - text: |
         EQUIVALENCY REQUIREMENTS
-        1. Official academic transcript from the origin university.
-        2. Transfer Certificate or an official cover letter from the origin campus.
-        3. Syllabus of courses completed at the origin campus (if requested by the destination study program).
-        4. Officially registered in PDDikti (Higher Education Database).
+        1. Minimum GPA of 2.75 from origin program (RPL-TK path) or minimum GPA of 2.50 (Transfer/Pindahan path).
+        2. Origin study program must be accredited min. B/Baik Sekali and registered on PDDikti (proven by screenshot of https://pddikti.kemdiktisaintek.go.id).
+        3. The number of credits obtained from origin program is at least n x 12 credits (where n is the number of semesters taken) without D and E grades.
+        4. Maximum recognized credits is 85% (max 100 SKS) if origin program accreditation is Same/Higher; or max 75% (max 90 SKS) if origin program accreditation is Lower by One Level.
+        5. Non-Color-Blind Certificate (for specific programs under FK, FKG, FSRD, FTKE, FALTL, FTSP, and FTI [Mechanical, Electrical, Industrial Engineering]).
       translation:
         id: |
           PERSYARATAN PENYETARAAN
-          1. Transkrip nilai resmi akademik dari perguruan tinggi asal.
-          2. Surat Keterangan Pindah atau surat pengantar resmi dari kampus asal.
-          3. Silabus mata kuliah yang pernah ditempuh di kampus asal (jika diminta oleh program studi tujuan).
-          4. Terdaftar secara resmi di PDDikti (Pangkalan Data Pendidikan Tinggi).
+          1. IPK minimal 2,75 dari program studi asal (untuk jalur RPL-TK alih jenjang) atau IPK minimal 2,50 (untuk jalur Pindahan).
+          2. Berasal dari program studi yang terakreditasi minimal B/Baik Sekali dan terdaftar di PDDikti (dibuktikan dengan tangkapan layar/screenshot pencarian nama di https://pddikti.kemdiktisaintek.go.id).
+          3. Jumlah SKS dari kampus asal paling sedikit adalah n x 12 SKS (di mana n adalah semester yang telah ditempuh) tanpa nilai D dan E.
+          4. Batas maksimal SKS yang dapat diakui adalah 85% dari total SKS (maksimal 100 SKS) jika akreditasi prodi asal Sama atau Lebih Tinggi; atau maksimal 75% (maksimal 90 SKS) jika akreditasi prodi asal Lebih Rendah Satu Tingkat.
+          5. Surat Keterangan Tidak Buta Warna (bagi prodi tertentu di lingkup FK, FKG, FSRD, FTKE, FALTL, FTSP, dan FTI [Teknik Mesin, Teknik Elektro, Teknik Industri]).
 
   utter_answer_hasil_penyetaraan:
     - text: "The grade conversion equivalency process has been finalized and graded by the study program."

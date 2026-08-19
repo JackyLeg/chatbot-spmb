@@ -85,34 +85,32 @@ responses:
   utter_answer_prosedur_perjanjian:
     - text: |
         NEW STUDENT AGREEMENT SIGNING PROCEDURE
-        1. Log in to the SPMB Trisakti portal.
-        2. Download the New Student Agreement Letter draft from your dashboard.
-        3. Read and understand your rights and obligations as a prospective new student of Universitas Trisakti.
-        4. Sign the document on a Rp10,000 physical stamp duty (meterai) along with your Parent/Guardian.
-        5. Re-upload the scanned file of the signed agreement letter.
+        1. Log in to the SPMB Trisakti portal and download the New Student Agreement Letter draft.
+        2. Print the agreement letter draft physically.
+        3. Read, understand, and sign the agreement letter on a Rp10,000 stamp duty (meterai) along with your Parent/Guardian (wet signatures).
+        4. Upload the scanned color copy of the signed agreement letter to the SPMB portal under the Registration Completeness menu.
       translation:
         id: |
           PROSEDUR PENANDATANGANAN PERJANJIAN MAHASISWA BARU
-          1. Login ke portal SPMB Trisakti.
-          2. Unduh draf Surat Perjanjian Mahasiswa Baru dari dashboard Anda.
-          3. Baca dan pahami hak serta kewajiban sebagai calon mahasiswa baru Universitas Trisakti.
-          4. Tanda tangani dokumen di atas meterai Rp10.000 bersama dengan Orang Tua/Wali.
-          5. Unggah kembali berkas scan surat perjanjian yang telah ditandatangani.
+          1. Login ke portal SPMB Trisakti dan unduh draf Surat Perjanjian Mahasiswa Baru.
+          2. Cetak draf surat perjanjian tersebut secara fisik.
+          3. Baca, pahami, dan tanda tangani surat perjanjian di atas meterai Rp10.000 bersama dengan Orang Tua/Wali (tanda tangan basah).
+          4. Unggah hasil pindaian berwarna (scan) surat perjanjian yang telah ditandatangani tersebut ke portal SPMB menu Kelengkapan Registrasi.
 
   utter_answer_persyaratan_perjanjian:
     - text: |
         AGREEMENT DOCUMENT REQUIREMENTS
-        1. Officially declared passed the Universitas Trisakti entrance selection.
-        2. Original New Student Agreement Letter printed from the portal.
-        3. One Rp10,000 stamp duty (meterai).
-        4. Physical signatures of the student and parent/guardian.
+        1. Official draft of the New Student Agreement Letter printed from the SPMB portal.
+        2. One Rp10,000 stamp duty (meterai).
+        3. Wet signatures of both the candidate and parent/guardian on the stamp duty.
+        4. Must be uploaded by all admission pathways (USM, PSSB, UTBK, Portfolio, Scholarship, Transfer/RPL) no later than August 20, 2026.
       translation:
         id: |
           PERSYARATAN DOKUMEN PERJANJIAN
-          1. Telah dinyatakan lulus seleksi masuk Universitas Trisakti.
-          2. Surat Perjanjian Mahasiswa Baru asli yang dicetak dari portal.
-          3. Meterai Rp10.000 (1 buah).
-          4. Tanda tangan basah mahasiswa dan orang tua/wali mahasiswa.
+          1. Draf Surat Perjanjian Mahasiswa Baru resmi yang dicetak dari portal SPMB.
+          2. Meterai Rp10.000 sebanyak 1 (satu) buah.
+          3. Tanda tangan basah calon mahasiswa dan orang tua/wali di atas meterai.
+          4. Wajib diunggah oleh semua jalur penerimaan (USM, PSSB, UTBK, Portofolio, Beasiswa, Pindahan/RPL) paling lambat 20 Agustus 2026.
 
   utter_answer_transaksi_perjanjian:
     - text: "Please upload the signed new student agreement document on the stamp duty."

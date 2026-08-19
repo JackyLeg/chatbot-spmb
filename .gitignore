@@ -18,3 +18,5 @@ __pycache__/
 # Local Configuration (usually contains sensitive credentials)
 credentials.yml
 endpoints.yml
+
+Juknis PMB 2026-2027.pdf

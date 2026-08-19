@@ -14,10 +14,17 @@ class ActionDetectLanguage(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         
+        # Check if language is provided in metadata (e.g. from REST request/Postman)
+        metadata = tracker.latest_message.get("metadata", {}) or {}
+        req_lang = metadata.get("language") if isinstance(metadata, dict) else None
+        if req_lang in ["en", "id"]:
+            return [SlotSet("language", req_lang)]
+
         # Get the latest message text
         user_text = tracker.latest_message.get("text", "")
         if not user_text:
-            return [SlotSet("language", "id")]
+            current_lang = tracker.get_slot("language")
+            return [SlotSet("language", current_lang if current_lang in ["en", "id"] else "id")]
 
         text_lower = user_text.lower().strip()
 
@@ -47,7 +54,16 @@ class ActionDetectLanguage(Action):
             if kw in text_lower:
                 id_score += 2
 
+        # Get previous language
+        current_lang = tracker.get_slot("language")
+
         # Set slot value
-        detected_lang = "en" if en_score > id_score else "id"
+        if en_score > id_score:
+            detected_lang = "en"
+        elif id_score > en_score:
+            detected_lang = "id"
+        else:
+            # Preserving the previous language if scores are equal (ties or neutral messages)
+            detected_lang = current_lang if current_lang in ["en", "id"] else "id"
         
         return [SlotSet("language", detected_lang)]
